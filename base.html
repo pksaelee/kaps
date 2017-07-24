@@ -3,9 +3,12 @@
 <head>
 	<title></title>
 	<script type= "text/javascript" src="js/processing.min.js"></script>
+	<!-- Calling font style -->
+	<link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
 </head>
 <style>
-canvas{
+canvas {
+	/*Centering canvas*/
 	position: absolute;
     top:0;
     bottom: 0;
@@ -18,13 +21,34 @@ canvas{
 </style>
 <body>
 	<script type="text/processing" data-processing-target = "targetcanvas">
-	void setup(){
-		size(750,600);
-	}
-	void draw(){
 
+	int fontsize =50;
+	void setup(){
+		// creates canvas
+		size(750,600);;
+		background(0);
+		textFont(createFont("Press Start 2P",fontsize));
 	}
+	void button(){
+		fill(255,0,0);
+		rect(250,400, 250, 100);
+		textSize(35);
+		fill(255);
+		text("Start",290,470);
+		
+	}
+
+	void draw(){
+		// draws images and text
+		text("You Choose", 125,300);
+		button();
+
+
+		
+	}
+
 	</script>
 	<canvas id="targetcanvas"></canvas>
 </body>
 </html>
+<!-- http://www.wallpapervortex.com/wallpaper-27892_pixelated_pixel_cityscape.html#.WXZUOIjyvIU -->
