@@ -17,17 +17,20 @@ canvas {
     margin:auto;
 }
 
-
 </style>
 <body>
 	<script type="text/processing" data-processing-target = "targetcanvas">
 
 	int fontsize =50;
+	int a;
 	PImage img;
-	/*@pjs preload = "main.jpg*/
+	/*@pjs preload = "main.jpg"*/
+	PImage img1;
+	/*@pjs preload = "classroom0.jpg"*/
 	void setup(){
 		// creates canvas
-		img = loadImage("main.jpg")
+		img = loadImage("main.jpg");
+		img1 = loadImage("classroom0.jpg");
 		size(750,600);
 		background(img);
 		textFont(createFont("Press Start 2P",fontsize));
@@ -45,6 +48,7 @@ canvas {
 		// draws images and text
 		text("You Choose", 125,300);
 		button();
+		image(img1,0,0);
 
 
 		
