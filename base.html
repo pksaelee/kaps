@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type= "text/javascript" src="js/processing.min.js"></script>
+	<!-- Calling font style -->
+	<link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+</head>
+<style>
+canvas {
+	/*Centering canvas*/
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+</style>
+<body>
+	<script type="text/processing" data-processing-target = "targetcanvas">
+	int fontsize =50;
+	int a;
+	PImage img;
+	/*@pjs preload = "main.jpg"*/
+	PImage img1;
+	/*@pjs preload = "classroom0.jpg"*/
+	void setup(){
+		// creates canvas
+		img = loadImage("main.jpg");
+		img1 = loadImage("classroom0.jpg");
+		size(750,600);
+		background(img);
+		textFont(createFont("Press Start 2P",fontsize));
+	}
+	void button(){
+		fill(255,0,0);
+		rect(250,400, 250, 100);
+		textSize(35);
+		fill(255);
+		text("Start",290,470);
+		
+	}
+	void draw(){
+		// draws images and text
+		text("You Choose", 125,300);
+		button();
+		image(img1,0,0);
+		
+	}
+	</script>
+	<canvas id="targetcanvas"></canvas>
+</body>
+</html>
+<!-- http://www.wallpapervortex.com/wallpaper-27892_pixelated_pixel_cityscape.html#.WXZUOIjyvIU -->
