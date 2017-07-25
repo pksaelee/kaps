@@ -23,10 +23,13 @@ canvas {
 	<script type="text/processing" data-processing-target = "targetcanvas">
 
 	int fontsize =50;
+	PImage img;
+	/*@pjs preload = "main.jpg*/
 	void setup(){
 		// creates canvas
-		size(750,600);;
-		background(0);
+		img = loadImage("main.jpg")
+		size(750,600);
+		background(img);
 		textFont(createFont("Press Start 2P",fontsize));
 	}
 	void button(){
