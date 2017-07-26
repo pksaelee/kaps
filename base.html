@@ -20,8 +20,7 @@ canvas {
 </style>
 <body>
 	<script type="text/processing" data-processing-target = "targetcanvas">
-
-
+	int counter = 1;
 	int fontsize =50;
 	boolean rectOver = false;
 	int value = 0;
@@ -36,11 +35,45 @@ canvas {
 	/*@pjs preload = "danno.png"*/
 	PImage teresa;
 	/*@pjs preload = "teresa2.png"*/
+	class Scene{
+		ArrayList backgroundImgs, characters;
+		int num;
+		Scene newScene;
+		//constructor takes argument sceneNum ==> determines which image to select in array 
+		Scene(sceneNum){
+			num = sceneNum;
+			backgroundImgs = new ArrayList();
+			characters = new ArrayList();
+			//adds images to list 
+			backgroundImgs.add(loadImage("classroom0.jpg"));
+			backgroundImgs.add(loadImage("clothingStore.jpg"));
+			characters.add(loadImage("teresa2.png"));
+			characters.add(loadImage("danno.png"));
 
+		}
 
+		void display(){
+				background(backgroundImgs[num-1]);
+
+				if(num == 2){
+					if(keyPressed && key == " "){
+						image(characters[0], 0, 90);
+						image(characters[1], 0, 90);
+					}	
+				}
+		}
+		boolean update(){
+			if(mousePressed){
+				return true;
+			}
+			return false;
+		}
+
+	}
 
 	void setup(){
 		//loads images
+		newScene = new Scene(counter);
 		img = loadImage("main.jpg");
 		img0 = loadImage("classroom0.jpg");
 		img1 = loadImage("clothingStore.jpg");
@@ -57,7 +90,6 @@ canvas {
 		// draws images and text
 		update(mouseX, mouseY);
 		background(img);
-
 		text("You Choose", 125,300);
 		//hover over button changes the color
 		if (rectOver){
@@ -70,6 +102,7 @@ canvas {
 		textSize(35);
 		fill(255);
 		text("Start",290,470);
+
 	}
 	// when the mouse hovers, fades button
 	void update(int x, int y){
@@ -82,10 +115,8 @@ canvas {
 	//only for start button
 	void mouseClicked(){
 		noLoop();
-		if (rectOver){
-			background(img1);
-		// 	image(babeDan,250,10);
-		// 	image(teresa,0,90);
+		if (rectOver && newScene.update()){
+			newScene.display();
 		}
 	}
 	//mouse function to hover and fade button
@@ -98,10 +129,10 @@ canvas {
 	}
 	//changes frames afterwards
 	void keyPressed(){
-		if (keyCode == LEFT){
+		if (key == ' '){
 			image(teresa,0,90);
 		}
-		if (keyCode == RIGHT){
+		if (key == ' '){
 			image(babeDan,250,10);		
 		}
 	}
