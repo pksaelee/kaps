@@ -5,6 +5,7 @@
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 	<link rel ="stylesheet" type = " text/css" href = "styling.css"/>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
 </head>
 
 <body>
@@ -12,10 +13,46 @@
 body{
 font-family: 'Press Start 2P';
 } 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+  }
 </style>
+
+
+
   <center>
-    
-   <h1> <img src="kaps.png"> </h1>
+       <ul>
+  <li><a href="file:///Users/kelseygriffin/Desktop/base.html">Game</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/about.html">About Us</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/sketch.html">About The Game</a></li>
+</ul>
+    </br>
+
+   <h1> <img src= "kaps.png"> </h1>
   
     <p class="w3-opacity"><i><b>Our Mission</b>
       <p> Hi! This is the K.A.P.S. team! Thank you for playing our game! We are group made up of diverse people. we're freaking awesome and thats literally all you need to know and sometimes i want to sleep for like 100 hours and yup pretty cool i guess lol idk what im doing im just trying to fill up the space 
@@ -25,23 +62,6 @@ font-family: 'Press Start 2P';
 
   <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-  
-<center>
-<div class="polaroid">
-  <img src="group.jpeg" alt="Norway" style="width:30%">
-  <div class="container">
-
-    <p>GWC trip to USC.</p>
-  </div>
-</div>
-
-<div class="polaroid">
-  <img src="pivotal.jpeg" style="width:30%">
-  <div class="container">
-    <p>Pivotal in Santa Monica</p>
-  </div>
-</div>
-</center>
 
     <div class="w3-row w3-padding-32">
       <div class="w3-third">
@@ -54,16 +74,51 @@ font-family: 'Press Start 2P';
       </div>
       <div class="w3-third">
         <p>Precious</p>
-        <img src="prec.png" class="w3-round" style="width:-60%">
+        <img src="prec.png" class="w3-round w3-margin-bottom" style="width:-60%">
       </div>
       <div>
       <p>Sandra</p>
-      <img src="sandra.jpg" class="w3-round" a style="width:-60%">
-    
+      <img src="sandra.jpg" class="w3-round w3-margin-bottom" a style="width:-60%">
       </div>
     </div>
   </div>
-  </head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="pivotal.jpeg" style="width:100%">
+  <img class="mySlides" src="group.jpeg" style="width:100%">
+  <img class="mySlides" src="danny.jpg" style="width:100%">
+  <img class="mySlides" src="img_forest.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+  
+</script>
 
 <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
   <center>
@@ -75,33 +130,19 @@ font-family: 'Press Start 2P';
       <div class="w3-col m6 w3-large w3-margin-bottom">
         <i class="fa fa-map-marker" style="width:30px"></i> Los Angeles, US<br>
         <i class="fa fa-envelope" style="width:30px"> </i> Email: kapsteam73@gmail.com<br>
-      </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+     
         </form>
       </div>
     </div>
   </div>
-
-  
-<!-- End Page Content -->
-</div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
 
 
 
-</footer>
-<script>
 
+
+</body>
 </body>
 </html>
 
