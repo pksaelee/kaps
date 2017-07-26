@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>You Choose!</title>
 	<script type= "text/javascript" src="js/processing.min.js"></script>
+	<link rel ="stylesheet" type = " text/css" href = "styler.css"/>
 	<!-- Calling font style -->
 	<link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+
 </head>
 <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 4px 5px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #000000;
+}
+
+.active {
+    background-color: #a5a5a5;
+}
 canvas {
 	/*Centering canvas*/
 	position: absolute;
@@ -18,6 +46,12 @@ canvas {
 }
 
 </style>
+<link rel ="stylesheet" type = " text/css" href = "styler.css"/>
+  <ul>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/base.html">Game</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/about.html">About Us</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/sketch.html">About The Game</a></li>
+</ul>
 <body>
 	<script type="text/processing" data-processing-target = "targetcanvas">
 
