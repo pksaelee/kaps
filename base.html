@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type= "text/javascript" src="js/processing.min.js"></script>
+	<!-- Calling font style -->
+	<link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+</head>
+<style>
+canvas {
+	/*Centering canvas*/
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+
+</style>
+<body>
+	<script type="text/processing" data-processing-target = "targetcanvas">
+
+	int fontsize =50;
+	PImage img;
+	/*@pjs preload = "main.jpg"*/
+	PImage img0;
+	/*@pjs preload = "classroom0.jpg"*/
+	PImage img1;
+	/*@pjs preload = "clothingStore.jpg"*/
+	PImage img2;
+	/*@pjs preload = "babeDan.png"*/
+
+	int mouseTouched = 0;
+
+
+	void setup(){
+		// creates canvas
+		img = loadImage("main.jpg");
+		img0 = loadImage("classroom0.jpg");
+		img1 = loadImage("clothingStore.jpg");
+		img2 = loadImage("babeDan.png")
+
+		size(750,600);
+		background(img);
+		textFont(createFont("Press Start 2P",fontsize));
+	}
+	void button(){
+		fill(255,0,0);
+		rect(250,400, 250, 100);
+		textSize(35);
+		fill(255);
+		text("Start",290,470);
+	}
+
+	void draw(){
+		// draws images and text
+
+		text("You Choose", 125,300);
+		button();
+		//image(img1,0,0);	
+	}
+	void mousePressed(){
+		noLoop();
+		background(img0);
+		mouseTouched++;
+		if (mouseTouched > 1){
+			background(img1);
+			image(img2, 100, 100);
+		}
+		if (mouseTouched > 2){
+			background(img);
+		}
+
+	}
+
+		image(img1,0,0);
+		
+	}
+
+	</script>
+	<canvas id="targetcanvas"></canvas>
+</body>
+</html>
+
+<!-- http://www.wallpapervortex.com/wallpaper-27892_pixelated_pixel_cityscape.html#.WXZUOIjyvIU -->
