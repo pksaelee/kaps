@@ -32,8 +32,10 @@ canvas {
 	/*@pjs preload = "classroom0.jpg"*/
 	PImage img1;
 	/*@pjs preload = "clothingStore.jpg"*/
-	PImage img2;
-	/*@pjs preload = "dan.png"*/
+	PImage babeDan;
+	/*@pjs preload = "danno.png"*/
+	PImage teresa;
+	/*@pjs preload = "teresa2.png"*/
 
 
 
@@ -42,7 +44,8 @@ canvas {
 		img = loadImage("main.jpg");
 		img0 = loadImage("classroom0.jpg");
 		img1 = loadImage("clothingStore.jpg");
-		img2 = loadImage("dan.png");
+		babeDan = loadImage("danno.png");
+		teresa = loadImage("teresa2.png");
 
 		// creates canvas
 		size(750,600);
@@ -81,6 +84,8 @@ canvas {
 		noLoop();
 		if (rectOver){
 			background(img1);
+		// 	image(babeDan,250,10);
+		// 	image(teresa,0,90);
 		}
 	}
 	//mouse function to hover and fade button
@@ -93,11 +98,11 @@ canvas {
 	}
 	//changes frames afterwards
 	void keyPressed(){
-		keyPressed++;
-		if (keyPressed > 1){
-			background(img0);
-		} else{
-			background(img0);
+		if (keyCode == LEFT){
+			image(teresa,0,90);
+		}
+		if (keyCode == RIGHT){
+			image(babeDan,250,10);		
 		}
 	}
 
