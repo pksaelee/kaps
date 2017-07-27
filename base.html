@@ -89,6 +89,17 @@ class Scene{
 			//displays the background image based on the scene number and place in array
 			background(backgroundImgs[num-1]);
 			//conditionals for characters because this part requires a little logic, but not too much  
+			//if(num == 0){
+				// fill(0);
+				// rect(75, 130, 600, 400);
+				// textSize(36);
+				// fill(255);
+				// text("How To Play", 190, 240);
+
+				// String s = "In order to play the game and have a great time, please follow these instructions.\n\nPress the left arrow key, then the right. Continue alternating b/w the keys to continue the game.\n\n"
+				// textSize(23);
+				// text(s, 100, 300, 600, 400);
+			//}
 			if(num == 1){
 				image(characters[0], 240, 10);
 				image(characters[1], 0, 90);
@@ -164,8 +175,16 @@ class Scene{
 		noLoop();
 		state.update();
 		if (rectOver){
-			
-			state.display();
+			background(img);
+			fill(0);
+				rect(75, 130, 600, 400);
+				textSize(36);
+				fill(255);
+				text("How To Play", 190, 240);
+
+				String s = "In order to play the game and have a great time, please follow these instructions.\n\nPress the left arrow key, then the right. Continue alternating b/w the keys to continue the game.\n\nPress the left arrow key to enter the game."
+				textSize(19);
+				text(s, 100, 300, 600, 400);
 		}
 	}
 	//mouse function to hover and fade button
@@ -178,6 +197,7 @@ class Scene{
 	}
 	//changes frames afterwards
 	void keyPressed(){
+		state.display();
 		if(keyCode == LEFT && counter == 0){
 			textBox();
 			textLook();
@@ -262,8 +282,10 @@ class Scene{
 			background(img1);
 		}
 		
-	
 	}
+		
+		
+	
 	</script>
 	<canvas id="targetcanvas"></canvas>
 </body>
