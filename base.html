@@ -63,6 +63,8 @@ canvas {
 	/*@pjs preload = "danno.png"*/
 	PImage teresa;
 	/*@pjs preload = "teresa2.png"*/
+	PImages jeremy;
+	/*@pjs preload = "jeremy.png"*/
 	PImages[] backgroundImgs, characters;
 	void textBox(){
 			fill(0);
@@ -117,7 +119,7 @@ class Scene{
 }
 		//loads images
 		backgroundImgs = new PImage[2];
-		characters = new PImage[2];	
+		characters = new PImage[3];	
 	void setup(){
 
 		backgroundImgs[0] = loadImage("clothingStore.jpg");
@@ -125,6 +127,7 @@ class Scene{
 		
 		characters[0] = loadImage("danno.png");
 		characters[1] = loadImage("teresa2.png");
+		characters[2] = loadImage("jeremy.png")
 		// backgroundImgs.add(loadImage("main.jpg"));
 		//backgroundImgs.add(loadImage("classroom0.jpg"));
 		// backgroundImgs.add(loadImage("clothingStore.jpg"));
@@ -276,14 +279,59 @@ class Scene{
 			textLook();
 			text("Danny",550,480);
 			text("Ok Mama...",100,500);
+			textSize(12);
+			text("Press up key to go to next scene",100,550);
 			counter++;
 		}
-		if(counter == 12){
+		if(counter == 12 && keyCode == UP){
 			background(img1);
+			image(characters[2],0,160);
+			counter++;
 		}
-		
+		if(counter==13 && keyCode == LEFT){
+			background(img1);
+			image(characters[2],0,160);
+			textBox();
+			textLook();
+			text("Jeremy\nHey Danny?......\nDaaaaaaaaannnnnnny? Psst!",100,480);
+			counter++;
+		}
+		if(counter == 14 && keyCode == RIGHT){
+			midSchool();
+			textBox();
+			textLook();
+			text("Danny",550,480);
+			text("What?",100,500);
+		}
+		if(counter == 15 && keyCode == LEFT){
+			midSchool();
+			textBox();
+			textLook();
+			text("Jeremy\nDo you ever put your hair down?",100,480);
+			counter++;
+		}
+		if(counter == 16 && keyCode == RIGHT){
+			midSchool();
+			textBox();
+			textLook();
+			text("Danny",550,480);
+			text("At home. Why?",100,500);
+			counter++;
+		}
+		if(counter == 17 && keyCode == LEFT){
+			midSchool();
+			textBox();
+			textLook();
+			text("Jeremy\nWhy not at school?", 100,480)
+			counter++;
+		}
 	}
-		
+	void midSchool(){
+		background(img1);
+			image(characters[2],0,160);
+			image(characters[0],240,-30);
+			
+	}	
 		
 	
 	</script>
