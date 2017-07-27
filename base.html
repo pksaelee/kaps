@@ -79,9 +79,9 @@ class Scene{
 			//displays the background image based on the scene number and place in array
 			background(backgroundImgs[num-1]);
 			//conditionals for characters because this part requires a little logic, but not too much  
-			if(num == 1 && key == " "){
-				image(characters[0], 0, 90);
-				image(character[1], 100, 90);
+			if(num == 1){
+				image(characters[0], 240, 10);
+				image(characters[1], 0, 90);
 			}
 		}
 		void update(){
@@ -91,11 +91,11 @@ class Scene{
 	
 	void setup(){
 		//loads images
-		backgroundImgs = new PImage[3];
+		backgroundImgs = new PImage[2];
 		characters = new PImage[2];
-		backgroundImgs[0] = loadImage("main.jpg");
+		backgroundImgs[0] = loadImage("clothingStore.jpg");
 		backgroundImgs[1] = loadImage("classroom0.jpg");
-		backgroundImgs[2] = loadImage("clothingStore.jpg");
+		
 		characters[0] = loadImage("danno.png");
 		characters[1] = loadImage("teresa2.png");
 		// backgroundImgs.add(loadImage("main.jpg"));
@@ -103,7 +103,7 @@ class Scene{
 		// backgroundImgs.add(loadImage("clothingStore.jpg"));
 		// characters.add(loadImage("teresa2.png"));
 		// characters.add(loadImage("danno.png"));
-		// img = loadImage("main.jpg");
+		img = loadImage("main.jpg");
 		// img0 = loadImage("classroom0.jpg");
 		// img1 = loadImage("clothingStore.jpg");
 		// babeDan = loadImage("danno.png");
@@ -112,7 +112,7 @@ class Scene{
 		state = new Scene(0);
 		// creates canvas
 		size(750,600);
-		background(backgroundImgs[0]);
+		background(img);
 		textFont(createFont("Press Start 2P",fontsize));
 	}		
 	void draw(){
