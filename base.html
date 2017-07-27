@@ -70,42 +70,77 @@ canvas {
 	/*@pjs preload = "danno.png"*/
 	PImage teresa;
 	/*@pjs preload = "teresa2.png"*/
+	PImages[] backgroundImgs, characters;
 
-class Scene(){
-		ArrayList = backgroundImgs, characters;
-		backgroundImgs = new ArrayList[];
-		characters = new ArrayList[];
+	Scene state;
+class Scene{
+		//instantiates variables 
+		int num;
 
-		scene = num;
-		num = sceneNum;
-		backgroundImgs.add(loadImage("classroom0.jpg"));
-		backgroundImgs.add(loadImage("clothingStore.jpg"));
-		characters.add(loadImage("teresa2.png"));
-		characters.add(loadImage("danno.png"));
+		//constructor takes in sceneNum argument 
+		Scene(sceneNum){
+			num = sceneNum;
+			//adds images to backgroundImgs list and characters list 
+			
+		}
+		
+		void display(){
+			//displays the background image based on the scene number and place in array
+			background(backgroundImgs[num-1]);
+
+			//conditionals for characters because this part requires a little logic, but not too much  
+			if(num == 1 && key == " "){
+				image(characters[0], 0, 90);
+				image(character[1], 100, 90);
+
+			}
+		}
+
+		void update(){
+			num++;
+		}
 
 	}
-	void display(){
-
-	}
+	
 
 	void setup(){
 		//loads images
-		img = loadImage("main.jpg");
-		img0 = loadImage("classroom0.jpg");
-		img1 = loadImage("clothingStore.jpg");
-		babeDan = loadImage("danno.png");
-		teresa = loadImage("teresa2.png");
+
+		backgroundImgs = new PImage[3];
+		characters = new PImage[2];
+		backgroundImgs[0] = loadImage("main.jpg");
+		backgroundImgs[1] = loadImage("classroom0.jpg");
+		backgroundImgs[2] = loadImage("clothingStore.jpg");
+
+		characters[0] = loadImage("danno.png");
+		characters[1] = loadImage("teresa2.png");
+
+		// backgroundImgs.add(loadImage("main.jpg"));
+		// backgroundImgs.add(loadImage("classroom0.jpg"));
+		// backgroundImgs.add(loadImage("clothingStore.jpg"));
+		// characters.add(loadImage("teresa2.png"));
+		// characters.add(loadImage("danno.png"));
+
+		// img = loadImage("main.jpg");
+		// img0 = loadImage("classroom0.jpg");
+		// img1 = loadImage("clothingStore.jpg");
+		// babeDan = loadImage("danno.png");
+		// teresa = loadImage("teresa2.png");
+
+		//creates Scene object
+		state = new Scene(0);
 
 		// creates canvas
 		size(750,600);
-		background(img);
+		background(backgroundImgs[0]);
 		textFont(createFont("Press Start 2P",fontsize));
 	}		
 
 	void draw(){
 		// draws images and text
 		update(mouseX, mouseY);
-		background(img);
+
+		state.display();
 
 		text("You Choose", 125,300);
 		//hover over button changes the color
@@ -119,6 +154,7 @@ class Scene(){
 		textSize(35);
 		fill(255);
 		text("Start",290,470);
+
 	}
 	// when the mouse hovers, fades button
 	void update(int x, int y){
@@ -131,10 +167,10 @@ class Scene(){
 	//only for start button
 	void mouseClicked(){
 		noLoop();
+		state.update();
 		if (rectOver){
-			background(img1);
-		// 	image(babeDan,250,10);
-		// 	image(teresa,0,90);
+			
+			state.display();
 		}
 	}
 	//mouse function to hover and fade button
@@ -147,11 +183,9 @@ class Scene(){
 	}
 	//changes frames afterwards
 	void keyPressed(){
+		state.update();
 		if (key == " "){
-			image(teresa,0,90);
-		}
-		if (key == " "){
-			image(babeDan,250,10);		
+			state.display();
 		}
 	}
 
