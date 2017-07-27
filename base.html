@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="shortcut icon" type="image/x-icon" href="kaps.ico"/>
 	<title>You Choose!</title>
 	<script type= "text/javascript" src="js/processing.min.js"></script>
 	<link rel ="stylesheet" type = " text/css" href = "styler.css"/>
@@ -44,14 +45,14 @@ canvas {
 </style>
 <link rel ="stylesheet" type = " text/css" href = "styler.css"/>
   <ul>
-  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/base.html">Game</a></li>
-  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/about.html">About Us</a></li>
-  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/sketch.html">About The Game</a></li>
+  <li><a href="base.html">Game</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="sketch.html">About The Game</a></li>
 </ul>
 <body>
 	<script type="text/processing" data-processing-target = "targetcanvas">
 	int fontsize =50;
-	int counter = 0;
+	// int counter = 0;
 	boolean rectOver = false;
 	PImage img;
 	/*@pjs preload = "main.jpg"*/
@@ -65,6 +66,7 @@ canvas {
 	/*@pjs preload = "teresa2.png"*/
 	PImages[] backgroundImgs, characters;
 	Scene state;
+
 class Scene{
 		//instantiates variables 
 		int num;
@@ -78,7 +80,8 @@ class Scene{
 		void display(){
 			//displays the background image based on the scene number and place in array
 			background(backgroundImgs[num-1]);
-			//conditionals for characters because this part requires a little logic, but not too much  
+			//conditionals for characters because this part requires a little logic, but not too much
+			
 			if(num == 1){
 				image(characters[0], 240, 10);
 				image(characters[1], 0, 90);
@@ -88,9 +91,8 @@ class Scene{
 				rect(75,450,600,100);
 				textSize(15);
 				fill(255);
-				text("Teresa: Look at this dress! It's so",100,480);
-				text("cute with its little bow in the ",100,500);
-				text("middle...", 100, 520);
+				text("Teresa: Look at this dress! It's so\n
+				cute with its little bow in the\nmiddle...isn't it Danny?", 100, 480);
 			}
 			}
 		}
@@ -101,10 +103,13 @@ class Scene{
 	
 	void setup(){
 		//loads images
-		backgroundImgs = new PImage[2];
+		backgroundImgs = new PImage[3];
 		characters = new PImage[2];
-		backgroundImgs[0] = loadImage("clothingStore.jpg");
-		backgroundImgs[1] = loadImage("classroom0.jpg");
+				backgroundImgs[0] = loadImage("main.jpg");
+
+		backgroundImgs[1] = loadImage("clothingStore.jpg");
+		backgroundImgs[2] = loadImage("classroom0.jpg");
+		
 		
 		characters[0] = loadImage("danno.png");
 		characters[1] = loadImage("teresa2.png");
@@ -113,7 +118,7 @@ class Scene{
 		// backgroundImgs.add(loadImage("clothingStore.jpg"));
 		// characters.add(loadImage("teresa2.png"));
 		// characters.add(loadImage("danno.png"));
-		img = loadImage("main.jpg");
+		// img = loadImage("main.jpg");
 		// img0 = loadImage("classroom0.jpg");
 		// img1 = loadImage("clothingStore.jpg");
 		// babeDan = loadImage("danno.png");
@@ -122,7 +127,7 @@ class Scene{
 		state = new Scene(0);
 		// creates canvas
 		size(750,600);
-		background(img);
+		background(backgroundImgs[0]);
 		textFont(createFont("Press Start 2P",fontsize));
 	}		
 	void draw(){
