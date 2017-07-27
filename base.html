@@ -57,8 +57,8 @@ canvas {
 
 
 	int fontsize =50;
+	int counter = 0;
 	boolean rectOver = false;
-	int value = 0;
 
 	PImage img;
 	/*@pjs preload = "main.jpg"*/
@@ -71,7 +71,22 @@ canvas {
 	PImage teresa;
 	/*@pjs preload = "teresa2.png"*/
 
+class Scene(){
+		ArrayList = backgroundImgs, characters;
+		backgroundImgs = new ArrayList[];
+		characters = new ArrayList[];
 
+		scene = num;
+		num = sceneNum;
+		backgroundImgs.add(loadImage("classroom0.jpg"));
+		backgroundImgs.add(loadImage("clothingStore.jpg"));
+		characters.add(loadImage("teresa2.png"));
+		characters.add(loadImage("danno.png"));
+
+	}
+	void display(){
+
+	}
 
 	void setup(){
 		//loads images
@@ -132,10 +147,10 @@ canvas {
 	}
 	//changes frames afterwards
 	void keyPressed(){
-		if (keyCode == LEFT){
+		if (key == " "){
 			image(teresa,0,90);
 		}
-		if (keyCode == RIGHT){
+		if (key == " "){
 			image(babeDan,250,10);		
 		}
 	}
