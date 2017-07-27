@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>?</title>
+  <title>About The Game</title>
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-	<link rel ="stylesheet" type = " text/css" href = "styling.css"/>
+<link rel ="stylesheet" type = " text/css" href = "styling.css"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #000000;
 }
 
 li {
@@ -26,22 +27,58 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: #000000;
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: #a5a5a5;
 }
 </style>
 <link rel ="stylesheet" type = " text/css" href = "styling.css"/>
   <ul>
-  <li><a href="file:///Users/kelseygriffin/Desktop/base.html">Game</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/base.html">Game</a></li>
   <li><a href="file:///Users/kelseygriffin/Desktop/kaps/about.html">About Us</a></li>
   <li><a href="file:///Users/kelseygriffin/Desktop/kaps/sketch.html">About The Game</a></li>
 </ul>
 
   <h1><img src= "kaps.png"> </h1>
 
+  Sandra Valente designed all the characters we used in this game. These are the sketches and the script that we used.
+  
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=-5">
 <body>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="Chelsey.png" style="width:100%">
+  <img class="mySlides" src="Danny.png" style="width:100%">
+  <img class="mySlides" src="chels.jpg" style="width:100%">
+  <img class="mySlides" src="babyDan.jpg" style="width:100%">
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+
 
   
