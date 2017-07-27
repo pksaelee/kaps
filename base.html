@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="shortcut icon" type="image/x-icon" href="kaps.ico"/>
 	<title>You Choose!</title>
 	<script type= "text/javascript" src="js/processing.min.js"></script>
 	<link rel ="stylesheet" type = " text/css" href = "styler.css"/>
@@ -45,14 +44,14 @@ canvas {
 </style>
 <link rel ="stylesheet" type = " text/css" href = "styler.css"/>
   <ul>
-  <li><a href="base.html">Game</a></li>
-  <li><a href="about.html">About Us</a></li>
-  <li><a href="sketch.html">About The Game</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/base.html">Game</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/about.html">About Us</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/sketch.html">About The Game</a></li>
 </ul>
 <body>
 	<script type="text/processing" data-processing-target = "targetcanvas">
 	int fontsize =50;
-	// int counter = 0;
+	int counter = 0;
 	boolean rectOver = false;
 	PImage img;
 	/*@pjs preload = "main.jpg"*/
@@ -65,8 +64,15 @@ canvas {
 	PImage teresa;
 	/*@pjs preload = "teresa2.png"*/
 	PImages[] backgroundImgs, characters;
+	void textBox(){
+			fill(0);
+			rect(75,450,600,100);
+		}
+	void textLook(){
+		textSize(17);
+		fill(255);
+	}
 	Scene state;
-
 class Scene{
 		//instantiates variables 
 		int num;
@@ -77,49 +83,44 @@ class Scene{
 			
 		}
 		
+
+		
 		void display(){
 			//displays the background image based on the scene number and place in array
 			background(backgroundImgs[num-1]);
-			//conditionals for characters because this part requires a little logic, but not too much
-			
+			//conditionals for characters because this part requires a little logic, but not too much  
 			if(num == 1){
 				image(characters[0], 240, 10);
 				image(characters[1], 0, 90);
-			if(num == 1){
-				fill(0);
-				tint(255,128);
-				rect(75,450,600,100);
-				textSize(15);
-				fill(255);
-				text("Teresa: Look at this dress! It's so\n
-				cute with its little bow in the\nmiddle...isn't it Danny?", 100, 480);
+					textBox();
+					textLook();
+					text("Teresa\nLook at this dress! It's\nso cute with its little bow in\nthe middle...", 100, 480);
+				
 			}
-			}
+			
+			
 		}
 		void update(){
 			num++;
 		}
-	}
-	
-	void setup(){
+}
 		//loads images
-		backgroundImgs = new PImage[3];
-		characters = new PImage[2];
-				backgroundImgs[0] = loadImage("main.jpg");
+		backgroundImgs = new PImage[2];
+		characters = new PImage[2];	
+	void setup(){
 
-		backgroundImgs[1] = loadImage("clothingStore.jpg");
-		backgroundImgs[2] = loadImage("classroom0.jpg");
-		
+		backgroundImgs[0] = loadImage("clothingStore.jpg");
+		backgroundImgs[1] = loadImage("classroom0.jpg");
 		
 		characters[0] = loadImage("danno.png");
 		characters[1] = loadImage("teresa2.png");
 		// backgroundImgs.add(loadImage("main.jpg"));
-		// backgroundImgs.add(loadImage("classroom0.jpg"));
+		//backgroundImgs.add(loadImage("classroom0.jpg"));
 		// backgroundImgs.add(loadImage("clothingStore.jpg"));
 		// characters.add(loadImage("teresa2.png"));
 		// characters.add(loadImage("danno.png"));
-		// img = loadImage("main.jpg");
-		// img0 = loadImage("classroom0.jpg");
+		img = loadImage("main.jpg");
+		img1 = loadImage("classroom0.jpg");
 		// img1 = loadImage("clothingStore.jpg");
 		// babeDan = loadImage("danno.png");
 		// teresa = loadImage("teresa2.png");
@@ -127,13 +128,12 @@ class Scene{
 		state = new Scene(0);
 		// creates canvas
 		size(750,600);
-		background(backgroundImgs[0]);
+		background(img);
 		textFont(createFont("Press Start 2P",fontsize));
 	}		
 	void draw(){
 		// draws images and text
 		update(mouseX, mouseY);
-		state.display();
 		text("You Choose", 125,300);
 		//hover over button changes the color
 		if (rectOver){
@@ -146,6 +146,10 @@ class Scene{
 		textSize(35);
 		fill(255);
 		text("Start",290,470);
+
+		// if(counter == 12){
+		// 	state.display();
+		// }
 	}
 	// when the mouse hovers, fades button
 	void update(int x, int y){
@@ -174,10 +178,91 @@ class Scene{
 	}
 	//changes frames afterwards
 	void keyPressed(){
-		state.update();
-		if (keyCode == UP){
-			state.display();
+		if(keyCode == LEFT && counter == 0){
+			textBox();
+			textLook();
+			text("Teresa\nDon't you think so, Daniela?", 100,480);
+			counter+=1;
+
 		}
+		if(counter == 1 && keyCode == RIGHT){
+				textBox();
+				textLook();
+				text("Danny",550,480);
+				text("I guess...but why do I have to\nwear a dress?", 100,500);
+				counter+=1;
+			
+		}
+		if(counter==2 && keyCode == LEFT){
+		 	textBox();
+		 	textLook();
+		 	text("Danny", 550,480);
+		 	text("Mario and Adrian don't have to\nwear them at all.",100,500)
+		 	counter++;
+		}
+		if(counter==3 && keyCode == RIGHT){
+			textBox();
+			textLook();
+			text("Teresa\nHoney, your cousins are boys.\nThey aren't suppose to wear\ndresses cause they are for girls.", 100,480);
+			counter+=1;
+		}
+		if(counter==4 && keyCode == LEFT){
+		 	textBox();
+		 	textLook();
+		 	text("Danny", 550,480);
+		 	text("Then I want to be a boy.",100,500)
+		 	counter++;
+		}
+		if(counter == 5 && keyCode == RIGHT){
+			textBox();
+			textLook();
+			text("Teresa\n*AWKWARD LAUGH*",100,480)
+			counter++;
+		}
+		if(counter == 6 && keyCode == LEFT){
+			textBox();
+			textLook();
+			text("Teresa\nDanny, you silly girl. You can't\nbe a boy.",100,480);
+			counter++;
+		}
+		if(counter == 7 && keyCode == RIGHT){
+			textBox();
+			textLook();
+			text("Danny", 550,480);
+		 	text("But why not?",100,500)
+		 	counter++;
+		}
+		if(counter == 8 && keyCode == LEFT){
+			textBox();
+			textLook();
+			text("Teresa\nBecause you were born as a girl,\nnot a boy.",100,480)
+			counter++;
+		}
+		if(counter == 9 && keyCode == RIGHT){
+			textBox();
+			textLook();
+			text("Danny", 550,480);
+			text("Ok, but why can't I be a boy?\nCan I be a boy and a girl?",100,500);
+			counter++;
+		}
+		if(counter == 10 && keyCode == LEFT){
+			textBox();
+			textLook();
+			text("Teresa\nDaniela, you're a girl. Now stop\nwith this nonsense",100,480)
+			counter++;
+		}
+		if(counter == 11 && keyCode == RIGHT){
+			textBox();
+			textLook();
+			text("Danny",550,480);
+			text("Ok Mama...",100,500);
+			counter++;
+		}
+		if(counter == 12){
+			background(img1);
+		}
+		
+	
 	}
 	</script>
 	<canvas id="targetcanvas"></canvas>
