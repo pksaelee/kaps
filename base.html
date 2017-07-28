@@ -45,9 +45,9 @@ canvas {
 </style>
 <link rel ="stylesheet" type = " text/css" href = "styler.css"/>
   <ul>
-  <li><a href="base.html">Game</a></li>
-  <li><a href="about.html">About Us</a></li>
-  <li><a href="sketch.html">About The Game</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/base.html">Game</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/about.html">About Us</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/sketch.html">About The Game</a></li>
 </ul>
 <body>
 	<script type="text/processing" data-processing-target = "targetcanvas">
@@ -67,6 +67,8 @@ canvas {
 	/*@pjs preload = "teresa2.png"*/
 	PImages jeremy;
 	/*@pjs preload = "jeremy.png"*/
+	PImages danflip;
+	/*@pjs preload = "danno2.png"*/
 	PImages[] backgroundImgs, characters;
 	void textBox(){
 			fill(0);
@@ -121,7 +123,7 @@ class Scene{
 }
 		//loads images
 		backgroundImgs = new PImage[2];
-		characters = new PImage[3];	
+		characters = new PImage[4];	
 	void setup(){
 
 		backgroundImgs[0] = loadImage("clothingStore.jpg");
@@ -129,7 +131,8 @@ class Scene{
 		
 		characters[0] = loadImage("danno.png");
 		characters[1] = loadImage("teresa2.png");
-		characters[2] = loadImage("jeremy.png")
+		characters[2] = loadImage("jeremy.png");
+		characters[3] = loadImage("danno2.png");
 		// backgroundImgs.add(loadImage("main.jpg"));
 		//backgroundImgs.add(loadImage("classroom0.jpg"));
 		// backgroundImgs.add(loadImage("clothingStore.jpg"));
@@ -286,10 +289,10 @@ class Scene{
 			text("Danny",550,480);
 			text("Ok Mama...",100,500);
 			textSize(12);
-			text("Press up key to go to next scene",100,550);
+			text("(Press space to continue)",100,550);
 			counter++;
 		}
-		if(counter == 12 && keyCode == UP){
+		if(counter == 12 && key == ' '){
 			background(img1);
 			image(characters[2],0,160);
 			counter++;
@@ -397,17 +400,23 @@ class Scene{
 			image(characters[2],0,160);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6466cea77aa95ae78ba24c7881d20faea6ff5093
 			image(characters[3],450,150);
 			textBox();
 			textLook();
 			text("(Hold space to continue)",125,500);
 			counter++;	
+<<<<<<< HEAD
 =======
 			image(characters[0],240,-30);
 >>>>>>> 273d6a97a90bfdc29484353be0fd6db40d90ac93
 =======
 			image(characters[0],240,-30);
 >>>>>>> 273d6a97a90bfdc29484353be0fd6db40d90ac93
+=======
+>>>>>>> 6466cea77aa95ae78ba24c7881d20faea6ff5093
 		}
 		if (counter == 26 && key == ' '){
 		background(img1);
