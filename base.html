@@ -188,6 +188,7 @@ class Scene{
 				String s = "In order to play the game and have a great time, please follow these instructions.\n\nPress the left arrow key, then the right. Continue alternating b/w the keys to continue the game.\n\nPress space to continue."
 				textSize(19);
 				text(s, 100, 300, 600, 400);
+
 		}
 	}
 	//mouse function to hover and fade button
@@ -200,6 +201,7 @@ class Scene{
 	}
 	//changes frames afterwards
 	void keyPressed(){
+		noLoop();
 		if (key == ' ' && counter == 0){
 			state.display();
 		}
@@ -273,7 +275,7 @@ class Scene{
 		if(counter == 10 && keyCode == LEFT){
 			textBox();
 			textLook();
-			text("Teresa\nDaniela, you're a girl. Now stop\nwith this nonsense",100,480)
+			text("Teresa\nDaniela, you're a girl. Now stop\nwith this nonsense",100,480);
 			counter++;
 		}
 		if(counter == 11 && keyCode == RIGHT){
@@ -304,6 +306,7 @@ class Scene{
 			textLook();
 			text("Danny",550,480);
 			text("What?",100,500);
+			counter++;
 		}
 		if(counter == 15 && keyCode == LEFT){
 			midSchool();
@@ -324,8 +327,73 @@ class Scene{
 			midSchool();
 			textBox();
 			textLook();
-			text("Jeremy\nWhy not at school?", 100,480)
+			text("Jeremy\nWhy not at school?", 100,480);
 			counter++;
+		}
+		if(counter == 18 && keyCode == RIGHT){
+			midSchool();
+			textBox();
+			textLook();
+			text("Danny", 550,480);
+			text("Cause I don't want to?",100,500);
+			counter++;
+		}
+		if(counter == 18 && keyCode == LEFT){
+			midSchool();
+			textBox();
+			textLook();
+			text("Jeremy\nCan I see your hair down? I'm\ncurious.",100,480);
+			counter++;
+		}
+		if(counter == 19 && keyCode == RIGHT){
+			midSchool();
+			textBox();
+			textLook();
+			text("Danny",550,480);
+			text("No?",100,500);
+			counter++;
+		}
+		if(counter == 20 && keyCode == LEFT){
+			midSchool();
+			textBox();
+			textLook();
+			text("Jeremy\nPleeeeeeeease? Just once.",100,480);
+			counter++;
+		}
+		if(counter==21 && keyCode == RIGHT){
+			midSchool();
+			textBox();
+			textLook();
+			text("Danny",550,480);
+			text("No.",100,500);
+			counter++;
+		}
+		if(counter == 22 && keyCode == LEFT){
+			midSchool();
+			textBox();
+			textLook();
+			text("Jeremy\nJust for a sec.",100,480);
+			counter++;
+		}
+		if(counter == 23 && keyCode == RIGHT){
+			midSchool();
+			textBox();
+			textLook();
+			text("Danny",550,480);
+			text("I just said no.",100,500);
+			counter++;
+		}
+		if(counter == 24 && keyCode == LEFT){
+			midSchool();			
+			textBox();
+			textLook();
+			text("Jeremy\nFine.",100,480);
+			counter++;
+		}
+		if(counter == 25 & keyCode == RIGHT){
+			background(img1);
+			image(characters[2],0,160);
+			image(characters[0],240,-30);
 		}
 	}
 	void midSchool(){
