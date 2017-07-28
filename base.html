@@ -45,9 +45,9 @@ canvas {
 </style>
 <link rel ="stylesheet" type = " text/css" href = "styler.css"/>
   <ul>
-  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/base.html">Game</a></li>
-  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/about.html">About Us</a></li>
-  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/sketch.html">About The Game</a></li>
+  <li><a href="base.html">Game</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="sketch.html">About The Game</a></li>
 </ul>
 <body>
 	<script type="text/processing" data-processing-target = "targetcanvas">
@@ -66,8 +66,6 @@ canvas {
 	/*@pjs preload = "teresa2.png"*/
 	PImages jeremy;
 	/*@pjs preload = "jeremy.png"*/
-	PImages danflip;
-	/*@pjs preload = "danno2.png"*/
 	PImages[] backgroundImgs, characters;
 	void textBox(){
 			fill(0);
@@ -122,7 +120,7 @@ class Scene{
 }
 		//loads images
 		backgroundImgs = new PImage[2];
-		characters = new PImage[4];	
+		characters = new PImage[3];	
 	void setup(){
 
 		backgroundImgs[0] = loadImage("clothingStore.jpg");
@@ -130,8 +128,7 @@ class Scene{
 		
 		characters[0] = loadImage("danno.png");
 		characters[1] = loadImage("teresa2.png");
-		characters[2] = loadImage("jeremy.png");
-		characters[3] = loadImage("danno2.png");
+		characters[2] = loadImage("jeremy.png")
 		// backgroundImgs.add(loadImage("main.jpg"));
 		//backgroundImgs.add(loadImage("classroom0.jpg"));
 		// backgroundImgs.add(loadImage("clothingStore.jpg"));
@@ -288,10 +285,10 @@ class Scene{
 			text("Danny",550,480);
 			text("Ok Mama...",100,500);
 			textSize(12);
-			text("(Press space to continue)",100,550);
+			text("Press up key to go to next scene",100,550);
 			counter++;
 		}
-		if(counter == 12 && key == ' '){
+		if(counter == 12 && keyCode == UP){
 			background(img1);
 			image(characters[2],0,160);
 			counter++;
@@ -397,11 +394,7 @@ class Scene{
 		if(counter == 25 & keyCode == RIGHT){
 			background(img1);
 			image(characters[2],0,160);
-			image(characters[3],450,150);
-			textBox();
-			textLook();
-			text("(Press space to go continue)",125,500);
-			counter++;		
+			image(characters[0],240,-30);
 		}
 	}
 	void midSchool(){
