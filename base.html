@@ -45,14 +45,15 @@ canvas {
 </style>
 <link rel ="stylesheet" type = " text/css" href = "styler.css"/>
   <ul>
-  <li><a href="base.html">Game</a></li>
-  <li><a href="about.html">About Us</a></li>
-  <li><a href="sketch.html">About The Game</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/base.html">Game</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/about.html">About Us</a></li>
+  <li><a href="file:///Users/kelseygriffin/Desktop/kaps/sketch.html">About The Game</a></li>
 </ul>
 <body>
 	<script type="text/processing" data-processing-target = "targetcanvas">
 	int fontsize =50;
 	int counter = 0;
+	var x = 0;
 	boolean rectOver = false;
 	PImage img;
 	/*@pjs preload = "main.jpg"*/
@@ -66,6 +67,8 @@ canvas {
 	/*@pjs preload = "teresa2.png"*/
 	PImages jeremy;
 	/*@pjs preload = "jeremy.png"*/
+	PImages danflip;
+	/*@pjs preload = "danno2.png"*/
 	PImages[] backgroundImgs, characters;
 	void textBox(){
 			fill(0);
@@ -120,7 +123,7 @@ class Scene{
 }
 		//loads images
 		backgroundImgs = new PImage[2];
-		characters = new PImage[3];	
+		characters = new PImage[4];	
 	void setup(){
 
 		backgroundImgs[0] = loadImage("clothingStore.jpg");
@@ -128,7 +131,8 @@ class Scene{
 		
 		characters[0] = loadImage("danno.png");
 		characters[1] = loadImage("teresa2.png");
-		characters[2] = loadImage("jeremy.png")
+		characters[2] = loadImage("jeremy.png");
+		characters[3] = loadImage("danno2.png");
 		// backgroundImgs.add(loadImage("main.jpg"));
 		//backgroundImgs.add(loadImage("classroom0.jpg"));
 		// backgroundImgs.add(loadImage("clothingStore.jpg"));
@@ -285,10 +289,10 @@ class Scene{
 			text("Danny",550,480);
 			text("Ok Mama...",100,500);
 			textSize(12);
-			text("Press up key to go to next scene",100,550);
+			text("(Press space to continue)",100,550);
 			counter++;
 		}
-		if(counter == 12 && keyCode == UP){
+		if(counter == 12 && key == ' '){
 			background(img1);
 			image(characters[2],0,160);
 			counter++;
@@ -391,11 +395,27 @@ class Scene{
 			text("Jeremy\nFine.",100,480);
 			counter++;
 		}
-		if(counter == 25 & keyCode == RIGHT){
+		if(counter == 25 && keyCode == RIGHT){
 			background(img1);
 			image(characters[2],0,160);
-			image(characters[0],240,-30);
+			image(characters[3],450,150);
+			textBox();
+			textLook();
+			text("(Hold space to continue)",125,500);
+			counter++;	
 		}
+		if (counter == 26 && key == ' '){
+		background(img1);
+			image(characters[2],x+0,160);
+			image(characters[3],450,150);
+			x+=4;
+
+	}
+	if(x >= 352){
+		background(0);
+		textLook();
+		text("TO BE CONTINUED...",255,300);
+	}	
 	}
 	void midSchool(){
 		background(img1);
@@ -403,7 +423,7 @@ class Scene{
 			image(characters[0],240,-30);
 			
 	}	
-		
+	
 	
 	</script>
 	<canvas id="targetcanvas"></canvas>
