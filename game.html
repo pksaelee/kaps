@@ -185,18 +185,15 @@ canvas {
 	}
 
 	void keyPressed(){
-		if(key == ' ' && counter == 0){
-			String s = " But like glass under pressure, there is a breaking point.\n\nI reached my breaking point at 14, and from then on I didn't care about what others thought about me."
-			textSize(19);
-			text(s, 100, 260, 610, 400);
-
-			
-		}
-		if(key == ' ' && counter == 0){
-
+		if(key == ' '){
 			counter++;
 		}
 		if(key == ' ' && counter == 1){
+			String s = " But like glass under pressure, there is a breaking point.\n\nI reached my breaking point at 14, and from then on I didn't care about what others thought about me."
+			textSize(19);
+			text(s, 100, 260, 610, 400);	
+		}
+		if(key == ' ' && counter == 2){
 			String s = "My name is Daniela Montezino and this is my story."
 
 			textSize(19);
