@@ -60,12 +60,12 @@ canvas {
 	/*@pjs preload = "main.jpg"*/
 	PImage img0;
 	/*@pjs preload = "classroom0.jpg"*/
-	PImage Teresa:;
+	PImage teresa;
 	/*@pjs preload = "teresa2.png"*/
-	PImages Jeremy:;
+	PImages jeremy;
 	/*@pjs preload = "jeremy.png"*/
 	
-	PImages[] backgroundImgs, characters;
+	// PImages[] backgroundImgs, characters;
 	void textBox(){
 			fill(0);
 			rect(75,450,600,100);
@@ -97,7 +97,7 @@ canvas {
 // 		//loads images
 // 		backgroundImgs = new PImage[2];
 // 		characters = new PImage[4];	
-// 	void setup(){
+	void setup(){
 
 		// backgroundImgs[0] = loadImage("clothingStore.jpg");
 		// backgroundImgs[1] = loadImage("classroom0.jpg");
@@ -116,7 +116,7 @@ canvas {
 		img1 = loadImage("clothingStore.jpg");
 		teresa = loadImage("teresa2.png");
 		//creates Scene object
-		state = new Scene(0);
+		// state = new Scene(0);
 		// creates canvas
 		size(750,600);
 		background(img);
@@ -151,18 +151,18 @@ canvas {
 	//only for start button
 	void mouseClicked(){
 		noLoop();
-		state.update();
+		// state.update();
 		if (rectOver){
 			background(img);
-				fill(0);
-				rect(85, 10, 600, 750);
-				textSize(36);
-				fill(255);
-				text("", 180, 60);
+				// fill(0);
+				// rect(85, 10, 600, 750);
+				// textSize(36);
+				// fill(255);
+				// text("", 180, 60);
 
-				String s = ""
-				textSize(19);
-				text(s, 100, 80, 600, 400);
+				// String s = ""
+				// textSize(19);
+				// text(s, 100, 80, 600, 400);
 
 		}
 	}
