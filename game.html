@@ -166,7 +166,7 @@ canvas {
 			fill(255);
 			text("PROLOGUE", 120, 60);
 
-			String s = "Story from google docs in here :)"
+			String s = " Life is all about making choices, about creating your own path, but what happens when your freewill is taken away? You can't choose who you want to be because it's seen as unnatural or unyholy."
 			textSize(19);
 			text(s, 100, 80, 600, 400);
 
@@ -184,9 +184,27 @@ canvas {
 		}
 	}
 
-	// void keyPressed(){
-		
-	// }
+	void keyPressed(){
+		if(key == ' ' && counter == 0){
+			String s = " But like glass under pressure, there is a breaking point.\n\nI reached my breaking point at 14, and from then on I didn't care about what others thought about me."
+			textSize(19);
+			text(s, 100, 260, 610, 400);
+
+			
+		}
+		if(key == ' ' && counter == 0){
+
+			counter++;
+		}
+		if(key == ' ' && counter == 1){
+			String s = "My name is Daniela Montezino and this is my story."
+
+			textSize(19);
+			text(s, 100,410,610,400);
+			
+		}
+		print(counter);
+	}
 	</script>
 	<canvas id="targetcanvas"></canvas>
 </body>
