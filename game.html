@@ -215,16 +215,36 @@ canvas {
 
 		}
 		if(key ==' ' && counter == 4){
-			String s = "The feeling of discomfort became more evident as time progressed.\n\nMy mother would take me shopping to buy 'adorable' dresses, but I never wanted to buy any.\n\n It came to the point where I would refuse to go out with my mom just because I knew she would try to make me put on clothing I felt uncomfortable in."
+			String s = "The feeling of discomfort became more evident as time progressed."
 			textSize(19);
 			text(s, 100, 170, 600, 400);
 		}
 		if(key == ' ' && counter == 5){
-			background(0);
-			text("(Press space to continue)",100,590);
+			String s = "My mother would take me shopping to buy 'adorable' dresses, but I never wanted to buy any."
+			textSize(19);
+			text(s, 100, 250, 600, 400);
+
 		}
 		if(key == ' ' && counter == 6){
+			String s = "It came to the point where I would refuse to go out with my mom just because I knew she would try to make me put on clothing I felt uncomfortable in."
+			textSize(19);
+			text(s, 100, 350, 600, 400);
+		}
 
+				if(key == ' ' && counter == 7){
+			background(0);
+			text("(Press space to continue)",150,275);
+		}
+		if(key == ' ' && counter == 8){
+			background(img1);
+		}
+		if(key == ' ' && counter == 9){
+			image(teresa,0,90);
+			textBox();
+			textLook();
+			text("Mom:\nLook at this dress! It's\nso cute with its little bow in\nthe middle...",100,480);
+			textSize(12);
+			text("(Press space to continue)",100,550);
 		}
 		print(counter);
 	}
