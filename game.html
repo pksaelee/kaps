@@ -236,7 +236,7 @@ canvas {
 
 				if(key == ' ' && counter == 7){
 			background(0);
-			text("(Press space to continue)",150,275);
+			text("Press space to continue.",150,275);
 		}
 		if(key == ' ' && counter == 8){
 			background(img1);
@@ -282,8 +282,51 @@ canvas {
 		if(key == ' ' && counter == 15){
 			textBox();
 			textLook();
-			text("Mom:\n(AWKWARD LAUGH)\nDanny, you silly girl. You can't be a boy.",100,480);
+			text("Mom:\n(AWKWARD LAUGH)\nDanny, you silly girl. You can't\nbe a boy.",100,480);
 			spaceCont();
+		}
+		if(key == ' ' && counter == 16){
+			textBox();
+			textLook();
+			text("Danny:\nWhy not? Can't I be a boy and a\ngirl?", 100, 480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 17){
+			textBox();
+			textLook();
+			text("Mom:\nDaniela Montezino, you are a girl.\nI don't care if you don't like it,\nyou will wear the dress.", 100, 480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 18){
+			textBox();
+			textLook();
+			text("Mom:\nNow stop before I take out the\nchancla (sandal).", 100, 480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 19){
+			textBox();
+			textLook();
+			text("Danny:\nOk mama...", 100, 480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 20){
+			background(0);
+			fill(255);
+
+			String s = "She ended up buying me the dress and there were times when I was ok with wearing the dress. Although there were other times were I dreaded the look of the dress."
+
+			textSize(19);
+			text(s,100,80, 600, 400);
+
+			text("(Press space to continue.)", 100, 590);
+		}
+		if(key == ' ' && counter == 21){
+			String s = "In middle school, I lived the most awkwardest stage of my life. The worse experience I would say was when one of my rude classmates decided to pull my hair tie, just because he felt like it."
+			text(s, 100, 210, 600, 400);
+		}
+		if(key == ' ' && counter == 22){
+			String s = "Having my hair loose was a big discomfort for me. Something about it just made me feel unnatural.\n\nAfter that incident, I decided to cut my hair short."
+			text(s, 100, 375, 600, 400);
 		}
 		print(counter);
 	}
