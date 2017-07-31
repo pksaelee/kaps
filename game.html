@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>You Choose!</title>
+	<script type= "text/javascript" src="js/processing.min.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href= "kaps.ico"/>
+	<link rel ="stylesheet" type = " text/css" href = "styler.css"/>
+	<!-- Calling font style -->
+	<link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+
+</head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 4px 11px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #000000;
+}
+.active {
+    background-color: #a5a5a5;
+}
+canvas {
+	/*Centering canvas*/
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+</style>
+<link rel ="stylesheet" type = " text/css" href = "styler.css"/>
+  <ul>
+  <li><a href="game.html">Game</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="sketch.html">About The Game</a></li>
+</ul>
+<body>
+	<script type="text/processing" data-processing-target = "targetcanvas">
+	int fontsize =50;
+	int counter = 0;
+	int option = 0;
+	var x = 0;
+	boolean rectOver = false;
+	PImage img;
+	/*@pjs preload = "main.jpg"*/
+	PImage img0;
+	/*@pjs preload = "classroom0.jpg"*/
+	PImage teresa;
+	/*@pjs preload = "teresa2.png"*/
+	PImages jeremy;
+	/*@pjs preload = "jeremy.png"*/
+	
+	// PImages[] backgroundImgs, characters;
+	void textBox(){
+			fill(0);
+			rect(75,450,600,100);
+		}
+	void textLook(){
+		textSize(17);
+		fill(255);
+	}
+// 	Scene state;
+// class Scene{
+// 		//instantiates variables 
+// 		int num;
+// 		//constructor takes in sceneNum argument 
+// 		Scene(sceneNum){
+// 			num = sceneNum;
+// 			//adds images to backgroundImgs list and characters list 
+			
+// 		}
+
+				
+// 			}
+			
+			
+// 		}
+// 		void update(){
+// 			num++;
+// 		}
+// }
+// 		//loads images
+// 		backgroundImgs = new PImage[2];
+// 		characters = new PImage[4];	
+	void setup(){
+
+		// backgroundImgs[0] = loadImage("clothingStore.jpg");
+		// backgroundImgs[1] = loadImage("classroom0.jpg");
+		
+		// characters[0] = loadImage("danno.png");
+		// characters[1] = loadImage("Teresa:2.png");
+		// characters[2] = loadImage("Jeremy.png");
+		// characters[3] = loadImage("danno2.png");
+		// backgroundImgs.add(loadImage("main.jpg"));
+		//backgroundImgs.add(loadImage("classroom0.jpg"));
+		// backgroundImgs.add(loadImage("clothingStore.jpg"));
+		// characters.add(loadImage("Teresa:2.png"));
+		// characters.add(loadImage("danno.png"));
+		img = loadImage("main.jpg");
+		img1 = loadImage("classroom0.jpg");
+		img1 = loadImage("clothingStore.jpg");
+		teresa = loadImage("teresa2.png");
+		//creates Scene object
+		// state = new Scene(0);
+		// creates canvas
+		size(750,600);
+		background(img);
+		textFont(createFont("Press Start 2P",fontsize));
+	}		
+	void draw(){
+		// draws images and text
+		update(mouseX, mouseY);
+		text("You Choose", 125,300);
+		//hover over button changes the color
+		if (rectOver){
+			fill(200,0,0);
+		}else{
+			fill(255,0,0);
+		}
+		rect(250,400, 250, 100);
+		//start text
+		textSize(35);
+		fill(255);
+		text("Start",290,470);
+
+		
+	}
+	// when the mouse hovers, fades button
+	void update(int x, int y){
+		if(overRect(250,400,250,100)){
+			rectOver = true;
+		} else{
+			rectOver = false;
+		}
+	}
+	//only for start button
+	void mouseClicked(){
+		noLoop();
+		//state.update();
+		if (rectOver){
+			background(img);
+				// fill(0);
+				// rect(85, 10, 600, 750);
+				// textSize(36);
+				// fill(255);
+				// text("", 180, 60);
+
+				// String s = ""
+				// textSize(19);
+				// text(s, 100, 80, 600, 400);
+
+		}
+	}
+	//mouse function to hover and fade button
+	boolean overRect(int x, int y, int width, int height){
+		if (mouseX >= x && mouseX <= x+width && mouseY >= y && mouseY <= y+height){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	</script>
+	<canvas id="targetcanvas"></canvas>
+</body>
+</html>
