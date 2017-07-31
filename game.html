@@ -203,7 +203,6 @@ canvas {
 		}
 
 		if(key == ' ' && counter == 3){
-			background(img);
 			fill(0);
 			rect(85, 10, 600, 750);
 			fill(255);
@@ -217,6 +216,15 @@ canvas {
 			String s = "The feeling of discomfort became more evident as time progressed.\n\nMy mother would take me shopping to buy 'adorable' dresses, but I never wanted to buy any.\n\n It came to the point where I would refuse to go out with my mom just because I knew she would try to make me put on clothing I felt uncomfortable in."
 			textSize(19);
 			text(s, 100, 170, 600, 400);
+		}
+		if(key == ' ' && counter == 5){
+			fill(0);
+			rect(85, 10, 600, 750);
+			fill(255);
+			String s = 'My mother skimmed through the dresses on the rack, pausing every once in a while to look at one. She then stop at the one she liked and brought it out for me to see. “Look at this dress! It’s so cute with its little bow in the middle… Don’t you thinks so, Danny?” She said as she held up the so called cute dress. I scrunched up my face in disgust and shook my head, “Why do I have to wear a dress anyway? Mario and Adrian don’t need to.” “Your cousins are boys, you’re a girl and it’s your cousin, Abigail’s, <i>quince</i> (15th birthday).”'
+			textSize(19);
+			text(s, 100, 80, 600, 400);
+			text("(Press space to continue)",100,590);
 		}
 		print(counter);
 	}
