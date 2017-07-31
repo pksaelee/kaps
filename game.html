@@ -60,6 +60,8 @@ canvas {
 	/*@pjs preload = "main.jpg"*/
 	PImage img0;
 	/*@pjs preload = "classroom0.jpg"*/
+	PImage img1;
+	/*@pjs preload = "clothingStore.png*/
 	PImage teresa;
 	/*@pjs preload = "teresa2.png"*/
 	PImages jeremy;
@@ -112,7 +114,7 @@ canvas {
 		// characters.add(loadImage("Teresa:2.png"));
 		// characters.add(loadImage("danno.png"));
 		img = loadImage("main.jpg");
-		img1 = loadImage("classroom0.jpg");
+		img0 = loadImage("classroom0.jpg");
 		img1 = loadImage("clothingStore.jpg");
 		teresa = loadImage("teresa2.png");
 		//creates Scene object
@@ -218,13 +220,11 @@ canvas {
 			text(s, 100, 170, 600, 400);
 		}
 		if(key == ' ' && counter == 5){
-			fill(0);
-			rect(85, 10, 600, 750);
-			fill(255);
-			String s = 'My mother skimmed through the dresses on the rack, pausing every once in a while to look at one. She then stop at the one she liked and brought it out for me to see. “Look at this dress! It’s so cute with its little bow in the middle… Don’t you thinks so, Danny?” She said as she held up the so called cute dress. I scrunched up my face in disgust and shook my head, “Why do I have to wear a dress anyway? Mario and Adrian don’t need to.” “Your cousins are boys, you’re a girl and it’s your cousin, Abigail’s, <i>quince</i> (15th birthday).”'
-			textSize(19);
-			text(s, 100, 80, 600, 400);
+			background(0);
 			text("(Press space to continue)",100,590);
+		}
+		if(key == ' ' && counter == 6){
+
 		}
 		print(counter);
 	}
