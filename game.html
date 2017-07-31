@@ -60,6 +60,10 @@ canvas {
 	/*@pjs preload = "main.jpg"*/
 	PImage img0;
 	/*@pjs preload = "classroom0.jpg"*/
+	PImage img1;
+	/*@pjs preload = "clothingStore.png*/
+	PImage babeDan;
+	/*@pjs preload = "danno.png"*/
 	PImage teresa;
 	/*@pjs preload = "teresa2.png"*/
 	PImages jeremy;
@@ -112,9 +116,10 @@ canvas {
 		// characters.add(loadImage("Teresa:2.png"));
 		// characters.add(loadImage("danno.png"));
 		img = loadImage("main.jpg");
-		img1 = loadImage("classroom0.jpg");
+		img0 = loadImage("classroom0.jpg");
 		img1 = loadImage("clothingStore.jpg");
 		teresa = loadImage("teresa2.png");
+		babeDan = loadImage("danno.png")
 		//creates Scene object
 		// state = new Scene(0);
 		// creates canvas
@@ -151,18 +156,28 @@ canvas {
 	//only for start button
 	void mouseClicked(){
 		noLoop();
-		// state.update();
+		//state.update();
 		if (rectOver){
 			background(img);
-				// fill(0);
-				// rect(85, 10, 600, 750);
+			fill(0);
+			rect(85, 10, 600, 750);
 				// textSize(36);
 				// fill(255);
 				// text("", 180, 60);
 
 				// String s = ""
-				// textSize(19);
-				// text(s, 100, 80, 600, 400);
+				
+			textSize(36);
+			fill(255);
+			text("PROLOGUE", 120, 60);
+
+			String s = " Life is all about making choices, about creating your own path, but what happens when your freewill is taken away? You can't choose who you want to be because it's seen as unnatural or unyholy."
+			textSize(19);
+			text(s, 100, 80, 600, 400);
+			text("(Press space to continue)", 100, 590);
+
+
+
 
 		}
 	}
@@ -173,6 +188,108 @@ canvas {
 		}else{
 			return false;
 		}
+	}
+
+	void keyPressed(){
+		if(key == ' '){
+			counter++;
+		}
+		if(key == ' ' && counter == 1){
+			String s = " But like glass under pressure, there is a breaking point.\n\n I reached my breaking point at 14, and from then on I didn't care about what others thought about me."
+			textSize(19);
+			text(s, 100, 260, 610, 400);	
+		}
+		if(key == ' ' && counter == 2){
+			String s = "My name is Daniela Montezino and this is my story."
+
+			textSize(19);
+			text(s, 100,410,610,400);
+			
+		}
+
+		if(key == ' ' && counter == 3){
+			fill(0);
+			rect(85, 10, 600, 750);
+			fill(255);
+			String s = "Around the time I turned 11, I started to notice that I didn't fit in with the other girls in my class."
+			textSize(19);
+			text(s, 100, 80, 600, 400);
+			text("(Press space to continue)", 100, 590);
+
+		}
+		if(key ==' ' && counter == 4){
+			String s = "The feeling of discomfort became more evident as time progressed."
+			textSize(19);
+			text(s, 100, 170, 600, 400);
+		}
+		if(key == ' ' && counter == 5){
+			String s = "My mother would take me shopping to buy 'adorable' dresses, but I never wanted to buy any."
+			textSize(19);
+			text(s, 100, 250, 600, 400);
+
+		}
+		if(key == ' ' && counter == 6){
+			String s = "It came to the point where I would refuse to go out with my mom just because I knew she would try to make me put on clothing I felt uncomfortable in."
+			textSize(19);
+			text(s, 100, 350, 600, 400);
+		}
+
+				if(key == ' ' && counter == 7){
+			background(0);
+			text("(Press space to continue)",150,275);
+		}
+		if(key == ' ' && counter == 8){
+			background(img1);
+		}
+		if(key == ' ' && counter == 9){
+			image(teresa,0,90);
+			textBox();
+			textLook();
+			text("Mom:\nLook at this dress! It's\nso cute with its little bow in\nthe middle...",100,480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 10){
+			textBox();
+			textLook();
+			text("Mom:\nDon't your think so, Danny?",100,480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 11){
+			image(babeDan);
+			textBox();
+			textLook();
+			text("Danny:\nI guess...but why do I have to\nwear a dress?",100,480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 12){
+			textBox();
+			textLook();
+			text("Danny:\nMario and Adrian don't have to\nwear them at all.",100,480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 13){
+			textBox();
+			textLook();
+			text("Mom:\nHoney, your cousins are boys.\nThey're not supposed to wear\ndresses because they're for girls.",100,480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 14){
+			textBox();
+			textLook();
+			text("Danny:\nThen I want to be a boy.",100,480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 15){
+			textBox();
+			textLook();
+			text("Mom:\n(AWKWARD LAUGH)\nDanny, you silly girl. You can't be a boy.",100,480);
+			spaceCont();
+		}
+		print(counter);
+	}
+	void spaceCont(){
+		textSize(12);
+		text("(Press space to continue)",100,550);
 	}
 	</script>
 	<canvas id="targetcanvas"></canvas>
