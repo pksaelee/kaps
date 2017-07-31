@@ -62,6 +62,8 @@ canvas {
 	/*@pjs preload = "classroom0.jpg"*/
 	PImage img1;
 	/*@pjs preload = "clothingStore.png*/
+	PImage babeDan;
+	/*@pjs preload = "danno.png"*/
 	PImage teresa;
 	/*@pjs preload = "teresa2.png"*/
 	PImages jeremy;
@@ -117,6 +119,7 @@ canvas {
 		img0 = loadImage("classroom0.jpg");
 		img1 = loadImage("clothingStore.jpg");
 		teresa = loadImage("teresa2.png");
+		babeDan = loadImage("danno.png")
 		//creates Scene object
 		// state = new Scene(0);
 		// creates canvas
@@ -243,10 +246,50 @@ canvas {
 			textBox();
 			textLook();
 			text("Mom:\nLook at this dress! It's\nso cute with its little bow in\nthe middle...",100,480);
-			textSize(12);
-			text("(Press space to continue)",100,550);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 10){
+			textBox();
+			textLook();
+			text("Mom:\nDon't your think so, Danny?",100,480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 11){
+			image(babeDan);
+			textBox();
+			textLook();
+			text("Danny:\nI guess...but why do I have to\nwear a dress?",100,480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 12){
+			textBox();
+			textLook();
+			text("Danny:\nMario and Adrian don't have to\nwear them at all.",100,480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 13){
+			textBox();
+			textLook();
+			text("Mom:\nHoney, your cousins are boys.\nThey're not supposed to wear\ndresses because they're for girls.",100,480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 14){
+			textBox();
+			textLook();
+			text("Danny:\nThen I want to be a boy.",100,480);
+			spaceCont();
+		}
+		if(key == ' ' && counter == 15){
+			textBox();
+			textLook();
+			text("Mom:\n(AWKWARD LAUGH)\nDanny, you silly girl. You can't be a boy.",100,480);
+			spaceCont();
 		}
 		print(counter);
+	}
+	void spaceCont(){
+		textSize(12);
+		text("(Press space to continue)",100,550);
 	}
 	</script>
 	<canvas id="targetcanvas"></canvas>
