@@ -68,6 +68,8 @@ canvas {
 	/*@pjs preload = "teresa2.png"*/
 	PImages jeremy;
 	/*@pjs preload = "jeremy.png"*/
+	PImages sidewalk;
+	/*@pjs preload = "sideWalk.jpg"*/
 	
 	// PImages[] backgroundImgs, characters;
 	void textBox(){
@@ -119,7 +121,8 @@ canvas {
 		img0 = loadImage("classroom0.jpg");
 		img1 = loadImage("clothingStore.jpg");
 		teresa = loadImage("teresa2.png");
-		babeDan = loadImage("danno.png")
+		babeDan = loadImage("danno.png");
+		sidewalk = loadImage("sideWalk.jpg")
 		//creates Scene object
 		// state = new Scene(0);
 		// creates canvas
@@ -175,10 +178,6 @@ canvas {
 			textSize(19);
 			text(s, 100, 80, 600, 400);
 			text("(Press space to continue)", 100, 590);
-
-
-
-
 		}
 	}
 	//mouse function to hover and fade button
@@ -234,7 +233,7 @@ canvas {
 			text(s, 100, 350, 600, 400);
 		}
 
-				if(key == ' ' && counter == 7){
+		if(key == ' ' && counter == 7){
 			background(0);
 			text("Press space to continue.",150,275);
 		}
@@ -306,14 +305,14 @@ canvas {
 		if(key == ' ' && counter == 19){
 			textBox();
 			textLook();
-			text("Danny:\nOk mama...", 100, 480);
+			text("Danny:\nOkay mama...", 100, 480);
 			spaceCont();
 		}
 		if(key == ' ' && counter == 20){
 			background(0);
 			fill(255);
 
-			String s = "She ended up buying me the dress and there were times when I was ok with wearing the dress. Although there were other times were I dreaded the look of the dress."
+			String s = "She ended up buying me the dress and there were times when I was okay with wearing the dress. Although there were other times were I dreaded the look of the dress."
 
 			textSize(19);
 			text(s,100,80, 600, 400);
@@ -322,18 +321,34 @@ canvas {
 		}
 		if(key == ' ' && counter == 21){
 			String s = "In middle school, I lived the most awkwardest stage of my life. The worse experience I would say was when one of my rude classmates decided to pull my hair tie, just because he felt like it."
-			text(s, 100, 210, 600, 400);
+			text(s, 100, 220, 600, 400);
 		}
 		if(key == ' ' && counter == 22){
 			String s = "Having my hair loose was a big discomfort for me. Something about it just made me feel unnatural.\n\nAfter that incident, I decided to cut my hair short."
 			text(s, 100, 375, 600, 400);
 		}
+		if(key == ' ' && counter == 23){
+			background(0);
+			text("Press space to continue.",150,275);
+		}
+		if(key == ' ' && counter == 24){
+			background(0); 
+			textSize(19);
+			text("Senior year of high school.", 150, 275);
+			text("(Press space to continue.)", 100, 590);
+
+		}
+		if(key == ' ' && counter == 25){
+			background(sidewalk);
+		}
 		print(counter);
 	}
+	
 	void spaceCont(){
 		textSize(12);
 		text("(Press space to continue)",100,550);
 	}
+
 	</script>
 	<canvas id="targetcanvas"></canvas>
 </body>
