@@ -54,7 +54,7 @@ canvas {
 	int fontsize =50;
 	int counter = 0;
 	int option = 0;
-	var x = 0;
+	int x = 0;
 	boolean rectOver = false;
 	PImage img;
 	/*@pjs preload = "main.jpg"*/
@@ -70,6 +70,17 @@ canvas {
 	/*@pjs preload = "jeremy.png"*/
 	PImages sidewalk;
 	/*@pjs preload = "sideWalk.jpg"*/
+	PImages chelsey;
+	/*@pjs preload = "chelsPix.png"*/
+	PImages dan;
+	/*@pjs preload = LeftDan.png*/
+	PImages clothing2;
+	/*@pjs preload = "clothingStore2.jpg"*/
+	PImages dan2;
+	/*@pjs preload = "LeftDan2.png"*/
+
+	int choice = 0;
+
 	
 	// PImages[] backgroundImgs, characters;
 	void textBox(){
@@ -122,7 +133,11 @@ canvas {
 		img1 = loadImage("clothingStore.jpg");
 		teresa = loadImage("teresa2.png");
 		babeDan = loadImage("danno.png");
-		sidewalk = loadImage("sideWalk.jpg")
+		sidewalk = loadImage("sideWalk.jpg");
+		chelsey = loadImage("chelsPix.png");
+		dan = loadImage("LeftDan.png");
+		clothing2 = loadImage("clothingStore2.jpg");
+		dan2 = loadImage("LeftDan2.png")
 		//creates Scene object
 		// state = new Scene(0);
 		// creates canvas
@@ -192,156 +207,342 @@ canvas {
 	void keyPressed(){
 		if(key == ' '){
 			counter++;
-		}
-		if(key == ' ' && counter == 1){
-			String s = " But like glass under pressure, there is a breaking point.\n\n I reached my breaking point at 14, and from then on I didn't care about what others thought about me."
-			textSize(19);
-			text(s, 100, 260, 610, 400);	
-		}
-		if(key == ' ' && counter == 2){
-			String s = "My name is Daniela Montezino and this is my story."
+			if(counter == 1){
+				String s = " But like glass under pressure, there is a breaking point.\n\n I reached my breaking point at 14, and from then on I didn't care about what others thought about me."
+				textSize(19);
+				text(s, 100, 260, 610, 400);	
+			}
+			if(counter == 2){
+				String s = "My name is Daniela Montezino and this is my story."
 
-			textSize(19);
-			text(s, 100,410,610,400);
+				textSize(19);
+				text(s, 100,410,610,400);
+				
+			}
+
+			if(counter == 3){
+				fill(0);
+				rect(85, 10, 600, 750);
+				fill(255);
+				String s = "Around the time I turned 11, I started to notice that I didn't fit in with the other girls in my class."
+				textSize(19);
+				text(s, 100, 80, 600, 400);
+				text("(Press space to continue)", 100, 590);
+
+			}
+			if(key ==' ' && counter == 4){
+				String s = "The feeling of discomfort became more evident as time progressed."
+				textSize(19);
+				text(s, 100, 170, 600, 400);
+			}
+			if(counter == 5){
+				String s = "My mother would take me shopping to buy 'adorable' dresses, but I never wanted to buy any."
+				textSize(19);
+				text(s, 100, 250, 600, 400);
+
+			}
+			if(counter == 6){
+				String s = "It came to the point where I would refuse to go out with my mom just because I knew she would try to make me put on clothing I felt uncomfortable in."
+				textSize(19);
+				text(s, 100, 350, 600, 400);
+			}
+
+			if(counter == 7){
+				background(0);
+				text("Press space to continue.",150,275);
+			}
+			if(counter == 8){
+				background(img1);
+			}
+			if(counter == 9){
+				image(teresa,0,90);
+				textBox();
+				textLook();
+				text("Mom:\nLook at this dress! It's\nso cute with its little bow in\nthe middle...",100,480);
+				spaceCont();
+			}
+			if(counter == 10){
+				textBox();
+				textLook();
+				text("Mom:\nDon't your think so, Danny?",100,480);
+				spaceCont();
+			}
+			if(counter == 11){
+				image(babeDan);
+				textBox();
+				textLook();
+				text("Danny:\nI guess...but why do I have to\nwear a dress?",100,480);
+				spaceCont();
+			}
+			if(counter == 12){
+				textBox();
+				textLook();
+				text("Danny:\nMario and Adrian don't have to\nwear them at all.",100,480);
+				spaceCont();
+			}
+			if(counter == 13){
+				textBox();
+				textLook();
+				text("Mom:\nHoney, your cousins are boys.\nThey're not supposed to wear\ndresses because they're for girls.",100,480);
+				spaceCont();
+			}
+			if(counter == 14){
+				textBox();
+				textLook();
+				text("Danny:\nThen I want to be a boy.",100,480);
+				spaceCont();
+			}
+			if(counter == 15){
+				textBox();
+				textLook();
+				text("Mom:\n(AWKWARD LAUGH)\nDanny, you silly girl. You can't\nbe a boy.",100,480);
+				spaceCont();
+			}
+			if(counter == 16){
+				textBox();
+				textLook();
+				text("Danny:\nWhy not? Can't I be a boy and a\ngirl?", 100, 480);
+				spaceCont();
+			}
+			if(counter == 17){
+				textBox();
+				textLook();
+				text("Mom:\nDaniela Montezino, you are a girl.\nI don't care if you don't like it,\nyou will wear the dress.", 100, 480);
+				spaceCont();
+			}
+			if(counter == 18){
+				textBox();
+				textLook();
+				text("Mom:\nNow stop before I take out the\nchancla (sandal).", 100, 480);
+				spaceCont();
+			}
+			if(counter == 19){
+				textBox();
+				textLook();
+				text("Danny:\nOkay mama...", 100, 480);
+				spaceCont();
+			}
+			if(counter == 20){
+				background(0);
+				fill(255);
+
+				String s = "She ended up buying me the dress and there were times when I was okay with wearing the dress. Although there were other times were I dreaded the look of the dress."
+
+				textSize(19);
+				text(s,100,80, 600, 400);
+
+				text("(Press space to continue.)", 100, 590);
+			}
+			if(counter == 21){
+				String s = "In middle school, I lived the most awkwardest stage of my life. The worse experience I would say was when one of my rude classmates decided to pull my hair tie, just because he felt like it."
+				text(s, 100, 220, 600, 400);
+			}
+			if(counter == 22){
+				String s = "Having my hair loose was a big discomfort for me. Something about it just made me feel unnatural.\n\nAfter that incident, I decided to cut my hair short."
+				text(s, 100, 375, 600, 400);
+			}
+			if(counter == 23){
+				background(0);
+				text("Press space to continue.",150,275);
+			}
+			if(counter == 24){
+				background(0); 
+				textSize(19);
+				text("Senior year of high school.", 150, 275);
+				text("(Press space to continue.)", 100, 590);
+
+			}
+			if(counter == 25){
+				background(sidewalk);
+			}
+			if(counter == 26){
+				image(chelsey,100,200);
+				textBox();
+				textLook();
+				text("Chelsey:\nHey Danny, you know who you're\ngonna ask to prom this Friday?",100,480);
+			}
+			if(counter == 27){
+				image(dan,300,210);
+				textBox();
+				textLook();
+				text("Danny:\nI guess I do.\n(BLUSHES)",100,480);
+			}
+			if(counter == 28){
+				textBox();
+				textLook();
+				text("Chelsey:\nOooooh! Who's that lucky person?",100,480);
+			}
+			if(counter == 29){
+				textBox();
+				textLook();
+				text("A.The boy who asked you out\nB.Ask Chelsey out\nC.Tell her you're not going",100,480);
+				counter++;
+			}
+
+			if(counter == 32){
+				if(choice == 1){
+					textBox();
+					textLook();
+					text("Chelsey:\nOMG You mean that guy whose been\ncrushing on you for months! ",100,480);
+
+				}
+				else if (choice == 2){
+					textBox();
+					textLook();
+					text("Chelsey:\n...Wait what?",100,480);
+
+				}
+				else if (choice == 3){
+					textBox();
+					textLook();
+					text("Chelsey:\nWhat?! No way you have to go!! I\nheard this year is going to be the\n bomb! ",100,480);
+
+				}
+
 			
+			}
+			if(counter == 33){
+				if(choice ==1){
+					textBox();
+					textLook();
+					text("Chelsey:\nWait I thought you didn't like him",100,480);	
+				}
+				else if(choice ==2){
+					textBox();
+					textLook();
+					text("Danny:\n A-as a friend, of course! I mean\nI figured since we’re the two\n musketeers since like forever!",100,480);	
+				}
+				else if(choice ==3){
+					textBox();
+					textLook();
+					text("Danny:\nI just don’t feel it Chels, and\nbesides I don’t like parties or\ncrowds that much anyways.",100,480);	
+				}
+
+
+			}
+			if(counter == 34){
+				if(choice ==1){
+					textBox();
+					textLook();
+					text("Danny:\nYeah I don't like him like that,\nbut he's a cool guy I guess.",100,480);	
+				}
+				else if(choice ==2){
+					textBox();
+					textLook();
+					text("Danny:\nGet them discount couple tickets,\nya’know…",100,480);	
+				}
+				else if(choice ==3){
+					textBox();
+					textLook();
+					text("Chelsey:\nOh, come on. You’re going to\nregret this. We only get to be\nyoung once.",100,480);	
+				}
+
+
+			}
+			if(counter == 35){
+				if(choice ==1){
+					textBox();
+					textLook();
+					text("Chelsey:\nBut wouldn’t it be better if you\nwent with someone you like like?",100,480);	
+				}
+				else if(choice ==2){
+					textBox();
+					textLook();
+					text("Danny:\nOh… ‘Course dude! Why does prom\nhave to be so expensive either\nway!",100,480);	
+				}
+				else if(choice ==3){
+					textBox();
+					textLook();
+					text("Danny:\nNo, I don’t think so. Not going.",100,480);	
+				}
+
+
+			}
+			if(counter == 36){
+				if(choice ==1){
+					textBox();
+					textLook();
+					text("Danny:\n But it would make things awkward\nbetween that someone.",100,480);	
+				}
+				else if(choice ==2){
+					textBox();
+					textLook();
+					text("Danny:\nYap...",100,480);
+					counter+=3;	
+				}
+				else if(choice ==3){
+					textBox();
+					textLo
+
+
+			}
+			if(counter ==37){
+
+				if (choice == 1){
+					textBox();ok();
+					text("Chelsey:\nOk fine.",100,480);	
+					
+					counter+=3;
+				}
+					textLook();
+					text("Danny:\nBesides, I don't have anyone I\nlike right now",100,480);	
+				}
+			}
+
+			if(counter ==38){
+
+				if (choice == 1){
+					textBox();
+					textLook();
+					text("Chelsey:\nWell ok then, suit yourself.",100,480);	
+				}
+
+			}
+				if (counter== 39){
+					background(clothing2);
+				}
+				if (counter ==40){
+					image(teresa,100,90);
+				}
+				if (counter ==41){
+					textBox();
+					textLook();
+					text("Teresa:\n Look at these sweaters!!They’re\nso cute…(gasp) and only $12.99!",100,480);	
+
+
+				}
+				if (counter == 42){
+					image(dan2,300,210)
+
+				}
 		}
 
-		if(key == ' ' && counter == 3){
-			fill(0);
-			rect(85, 10, 600, 750);
-			fill(255);
-			String s = "Around the time I turned 11, I started to notice that I didn't fit in with the other girls in my class."
-			textSize(19);
-			text(s, 100, 80, 600, 400);
-			text("(Press space to continue)", 100, 590);
+		if(key == 'a'&&counter == 30){
+			textBox();
+			textLook();
+			text("Danny:\n(SHRUGS)\nWell, Alex asked me out. I think\nI'll go with him.",100,480)
+			choice = 1;
+			counter++;
 
 		}
-		if(key ==' ' && counter == 4){
-			String s = "The feeling of discomfort became more evident as time progressed."
-			textSize(19);
-			text(s, 100, 170, 600, 400);
-		}
-		if(key == ' ' && counter == 5){
-			String s = "My mother would take me shopping to buy 'adorable' dresses, but I never wanted to buy any."
-			textSize(19);
-			text(s, 100, 250, 600, 400);
+		else if (key == 'b'&& counter == 30){
+			textBox();
+			textLook();
+			text("Danny:\nWell it's you.",100,480);
+			choice = 2;
 
-		}
-		if(key == ' ' && counter == 6){
-			String s = "It came to the point where I would refuse to go out with my mom just because I knew she would try to make me put on clothing I felt uncomfortable in."
-			textSize(19);
-			text(s, 100, 350, 600, 400);
+			counter++;
+		}else if (key == 'c' && counter == 30){
+			textBox();
+			textLook();
+			text("Danny:\nI don't think I'll be going.",100,480);
+			choice = 3;
+
+			counter++;
 		}
 
-		if(key == ' ' && counter == 7){
-			background(0);
-			text("Press space to continue.",150,275);
-		}
-		if(key == ' ' && counter == 8){
-			background(img1);
-		}
-		if(key == ' ' && counter == 9){
-			image(teresa,0,90);
-			textBox();
-			textLook();
-			text("Mom:\nLook at this dress! It's\nso cute with its little bow in\nthe middle...",100,480);
-			spaceCont();
-		}
-		if(key == ' ' && counter == 10){
-			textBox();
-			textLook();
-			text("Mom:\nDon't your think so, Danny?",100,480);
-			spaceCont();
-		}
-		if(key == ' ' && counter == 11){
-			image(babeDan);
-			textBox();
-			textLook();
-			text("Danny:\nI guess...but why do I have to\nwear a dress?",100,480);
-			spaceCont();
-		}
-		if(key == ' ' && counter == 12){
-			textBox();
-			textLook();
-			text("Danny:\nMario and Adrian don't have to\nwear them at all.",100,480);
-			spaceCont();
-		}
-		if(key == ' ' && counter == 13){
-			textBox();
-			textLook();
-			text("Mom:\nHoney, your cousins are boys.\nThey're not supposed to wear\ndresses because they're for girls.",100,480);
-			spaceCont();
-		}
-		if(key == ' ' && counter == 14){
-			textBox();
-			textLook();
-			text("Danny:\nThen I want to be a boy.",100,480);
-			spaceCont();
-		}
-		if(key == ' ' && counter == 15){
-			textBox();
-			textLook();
-			text("Mom:\n(AWKWARD LAUGH)\nDanny, you silly girl. You can't\nbe a boy.",100,480);
-			spaceCont();
-		}
-		if(key == ' ' && counter == 16){
-			textBox();
-			textLook();
-			text("Danny:\nWhy not? Can't I be a boy and a\ngirl?", 100, 480);
-			spaceCont();
-		}
-		if(key == ' ' && counter == 17){
-			textBox();
-			textLook();
-			text("Mom:\nDaniela Montezino, you are a girl.\nI don't care if you don't like it,\nyou will wear the dress.", 100, 480);
-			spaceCont();
-		}
-		if(key == ' ' && counter == 18){
-			textBox();
-			textLook();
-			text("Mom:\nNow stop before I take out the\nchancla (sandal).", 100, 480);
-			spaceCont();
-		}
-		if(key == ' ' && counter == 19){
-			textBox();
-			textLook();
-			text("Danny:\nOkay mama...", 100, 480);
-			spaceCont();
-		}
-		if(key == ' ' && counter == 20){
-			background(0);
-			fill(255);
 
-			String s = "She ended up buying me the dress and there were times when I was okay with wearing the dress. Although there were other times were I dreaded the look of the dress."
-
-			textSize(19);
-			text(s,100,80, 600, 400);
-
-			text("(Press space to continue.)", 100, 590);
-		}
-		if(key == ' ' && counter == 21){
-			String s = "In middle school, I lived the most awkwardest stage of my life. The worse experience I would say was when one of my rude classmates decided to pull my hair tie, just because he felt like it."
-			text(s, 100, 220, 600, 400);
-		}
-		if(key == ' ' && counter == 22){
-			String s = "Having my hair loose was a big discomfort for me. Something about it just made me feel unnatural.\n\nAfter that incident, I decided to cut my hair short."
-			text(s, 100, 375, 600, 400);
-		}
-		if(key == ' ' && counter == 23){
-			background(0);
-			text("Press space to continue.",150,275);
-		}
-		if(key == ' ' && counter == 24){
-			background(0); 
-			textSize(19);
-			text("Senior year of high school.", 150, 275);
-			text("(Press space to continue.)", 100, 590);
-
-		}
-		if(key == ' ' && counter == 25){
-			background(sidewalk);
-		}
-		print(counter);
+		print(choice);
 	}
 	
 	void spaceCont(){
