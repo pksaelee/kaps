@@ -348,7 +348,7 @@ canvas {
 			if(counter == 24){
 				background(0); 
 				textSize(19);
-				text("Senior year of high school.", 150, 275);
+				text("Senior year of high school.\n Monday", 150, 275);
 				text("(Press space to continue.)", 100, 590);
 
 			}
@@ -365,7 +365,7 @@ canvas {
 				image(dan,300,210);
 				textBox();
 				textLook();
-				text("Danny:\nI guess I do.\n(BLUSHES)",100,480);
+				text("Danny:\nI guess I do.",100,480);
 			}
 			if(counter == 28){
 				textBox();
@@ -395,7 +395,7 @@ canvas {
 				else if (choice == 3){
 					textBox();
 					textLook();
-					text("Chelsey:\nWhat?! No way you have to go!! I\nheard this year is going to be the\n bomb! ",100,480);
+					text("Chelsey:\nWhat?! No way you have to go!! I\nheard this year is going to be\nthe bomb! ",100,480);
 
 				}
 
@@ -405,12 +405,12 @@ canvas {
 				if(choice ==1){
 					textBox();
 					textLook();
-					text("Chelsey:\nWait I thought you didn't like him",100,480);	
+					text("Chelsey:\nWait I thought you didn't like\nhim.",100,480);	
 				}
 				else if(choice ==2){
 					textBox();
 					textLook();
-					text("Danny:\n A-as a friend, of course! I mean\nI figured since we’re the two\n musketeers since like forever!",100,480);	
+					text("Danny:\nA-as a friend, of course! I mean\nI figured since we’re the two\nmusketeers since like forever!",100,480);	
 				}
 				else if(choice ==3){
 					textBox();
@@ -462,30 +462,33 @@ canvas {
 				if(choice ==1){
 					textBox();
 					textLook();
-					text("Danny:\n But it would make things awkward\nbetween that someone.",100,480);	
+					text("Danny:\nBut it would make things awkward\nbetween that someone.",100,480);	
 				}
 				else if(choice ==2){
 					textBox();
 					textLook();
 					text("Danny:\nYap...",100,480);
-					counter+=3;	
 				}
 				else if(choice ==3){
 					textBox();
-					textLo
+					textLook();
+					text("Chelsey:\nOk, fine.",100,480);
+				}
 
 
 			}
 			if(counter ==37){
 
 				if (choice == 1){
-					textBox();ok();
-					text("Chelsey:\nOk fine.",100,480);	
-					
-					counter+=3;
-				}
+					textBox();
 					textLook();
 					text("Danny:\nBesides, I don't have anyone I\nlike right now",100,480);	
+				}
+				else if(choice == 2){
+					counter+=2;
+				}
+				else if(choice == 3){
+					counter+=2;
 				}
 			}
 
@@ -498,25 +501,270 @@ canvas {
 				}
 
 			}
+			if(choice == 1 || choice == 2){
 				if (counter== 39){
+					background(0);
+					fill(255);
+
+				String s = "After Chelsey and I parted, I was bombarded by my mother if I was going to prom. I told her I was going and she was jumping with glee, hearing that I have a date."
+
+				textSize(19);
+				text(s,100,80, 600, 400);
+
+				text("(Press space to continue.)", 100, 590);
+
+				}
+				if(counter == 40){
+					String s = "The following day afterschool, my mom was waitng for me at the front door, demanding that we both go shopping for a new dress for this upcoming Friday."
+
+				textSize(19);
+				text(s,100,210, 600, 400);
+
+				text("(Press space to continue.)", 100, 590);
+				}
+				if(counter == 41){
+					fill(255);
+				String s = "I didn't really want to go to the mall, but I still went along, seeing how excited my mother was."
+
+				textSize(19);
+				text(s,100,330, 600, 400);
+
+				text("(Press space to continue.)", 100, 590);
+				}
+				if(counter == 42){
 					background(clothing2);
 				}
-				if (counter ==40){
+				if (counter ==43){
 					image(teresa,100,90);
 				}
-				if (counter ==41){
+				if (counter ==44){
 					textBox();
 					textLook();
-					text("Teresa:\n Look at these sweaters!!They’re\nso cute…(gasp) and only $12.99!",100,480);	
+					text("Mom:\nLook at these sweaters!!They’re\nso cute…(GASP) and only $12.99!",100,480);	
 
 
 				}
-				if (counter == 42){
-					image(dan2,300,210)
+				if (counter == 45){
+					image(dan2,300,190);
+					textBox();
+					textLook();
+					text("Danny:\nMom, focus! We're here to get a\nprom outfit, not sweaters...",100,480);
 
 				}
+				if(counter == 46){
+					textBox();
+					textLook();
+					text("Danny:\nWhich, by the way, are probably\ncheaper as Chanclas4Less.",100,480);
+				}
+				if(counter == 47){
+					textBox();
+					textLook();
+					text("Mom:\nAye pues (Oh well)...Hurry up.\nChoose an outfit!!",100,480);
+
+				}
+				if(counter == 48){
+					textBox();
+					textLook();
+					text("A.The sparkly red tux\nB.The dark blue dress\nC.Don't buy any",100,480);
+					counter++;
+				}
+				if(counter == 51){
+					if(option == 1){
+						textBox();
+						textLook();
+						text("Teresa:\nOh my...that's...bright.",100,480);
+
+					}
+					else if(option == 2){
+						textBox();
+						textLook();
+						text("Teresa:\nOooh! That looks beautiful.",100,480);
+
+					}
+					else if(option == 3){
+						textBox();
+						textLook();
+						text("Teresa:\nWhy not? Don’t you want to look\nnice for this Friday?",100,480);
+
+					}
+				}
+				if(counter == 52){
+					if(option == 1){
+						textBox();
+						textLook();
+						text("Danny:\nYep, I’m going to wear this.",100,480);
+
+					}
+					else if(option == 2){
+						textBox();
+						textLook();
+						text("Danny:\nYeah, I like it.",100,480);
+
+					}
+					else if(option == 3){
+						textBox();
+						textLook();
+						text("Danny:\nI want to nice but I don’t like\nany of these outfits.",100,480);
+
+					}
+				}
+				if(counter == 53){
+					if(option == 1){
+						textBox();
+						textLook();
+						text("Mom:\nBut.........",100,480);
+
+					}
+					else if(option == 2){
+						textBox();
+						textLook();
+						text("Mom:\nYou will look wonderful on the\nday of your prom.",100,480);
+
+					}
+					else if(option == 3){
+						textBox();
+						textLook();
+						text("Mom:\nBut-",100,480);
+
+					}
+				}
+				if(counter == 54){
+					if(option == 1){
+						textBox();
+						textLook();
+						text("Mom:\nHaven't you always said to me to\nstand out?",100,480);
+					}
+					else if(option == 2){
+						textBox();
+						textLook();
+						text("Danny:\nThanks, mama.",100,480);
+					}
+					else if(option == 3){
+						textBox();
+						textLook();
+						text("Danny:\nIt's fine mama, I mean, we can\nsave money instead.",100,480);
+
+					}
+				}
+				if(counter == 55){
+					if(option == 1){
+						textBox();
+						textLook();
+						text("Mom:\nI did, but...fine. Let's go to the\ncashier.",100,480);
+					}
+					if(option == 2){
+						textBox();
+						textLook();
+						text("Mom:\nNow lets go to the cashier and\nbuy it.",100,480);
+					}
+					if(option == 3){
+						textBox();
+						textLook();
+						text("Mom:\nOkay, but first lets look around a\nbit more. I think I see a 50%\nclearance at the shoes aisle.",100,480);
+					}
+				}
+				if(counter == 56){
+					if(option == 1 || option == 2){
+						background(0);
+						fill(255);
+
+						String s = "Once we left the store, we went home to put my new outfits in a safe place."
+
+						textSize(19);
+						text(s,100,80, 600, 400);
+					}
+					if(option == 3){
+						background(0);
+						fill(255);
+
+						String s = "Once we left the store, my mother hurried us home so we can see if there's any clothes I can wear to prom. "
+
+						textSize(19);
+						text(s,100,80, 600, 400);
+
+					}
+					
+				}
+				if(counter ==57){
+					if(option == 1 || option == 2){
+						String s = "My mother checked on me over and over to make sure my prom outfit it somewhere where it won't get wrinkled."
+						textSize(19);
+						text(s,100,170, 600, 400);
+					}
+					if(option == 3){
+						String s = "And to put the hundreds of bought clearanced stuff away."
+						textSize(19);
+						text(s,100,200, 600, 400);
+					}
+					
+				}//All the choices she gave me were either too poofy or wasn't to my tastes. I told my mother not to worry and that I'll have one before prom.
+			}
+			if(choice == 3){
+				if(counter == 39){
+					background(0);
+				fill(255);
+
+				String s = "After Chelsey and I parted, I was bombarded by my mother if I was going to prom. I told her I wasn't going and she became upset from my answer."
+
+				textSize(19);
+				text(s,100,80, 600, 400);	
+				}
+				if(counter == 40){
+				fill(255);
+
+				String s = "My mother gave me an hour lecture off how I'm wasting my youth and that I didn't know how to enjoy my life, but even so, my mind still didn't change at all."
+
+				textSize(19);
+				text(s,100,200, 600, 400);
+				}
+				if(counter==41){
+					String s = "The day after that, my mother kept asking me afterschool if I had changed my mind and decided to go to prom. I firmly stated that I won't go and this went on till the day of prom."
+
+					textSize(19);
+					text(s,100,350,600,400);
+				}
+				if(counter == 42){
+					background(0);
+					fill(255);
+					String s = "It was hours before prom night started and an hour past the end of the school day. I decided to walk the the bakery I visit almost everyday, catching up with a friend who works there."
+					textSize(19);
+					text(s,100,80,600,400);
+
+				}
+				if(counter == 43){
+					String s = "I haven't seen that person during the whole week since prom week was pretty hectic. As I entered, the shop itself was empty, most likey due to everyone getting ready for their 'big night'."
+					textSize(19);
+					text(s,100,220,600,400);
+				}
+			}
+				
+		}
+		if(counter == 49){
+			if(key == 'a'){
+				textBox();
+			textLook();
+			text("Danny:\nI'm gonna get this red tux.",100,480)
+			option = 1;
+			counter++;
+			}
+
+			if(key == 'b'){
+				textBox();
+			textLook();
+			text("Danny:\nGuess I'll get this blue dress.",100,480)
+			option = 2;
+			counter++;
+			}	
+			if(key == 'c'){
+				textBox();
+			textLook();
+			text("Danny:\nI don't think I'll buy\nany...",100,480)
+			option = 3;
+			counter++;
+			}	
 		}
 
+		
 		if(key == 'a'&&counter == 30){
 			textBox();
 			textLook();
@@ -542,7 +790,7 @@ canvas {
 		}
 
 
-		print(choice);
+	print(counter);
 	}
 	
 	void spaceCont(){
