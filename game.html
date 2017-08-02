@@ -112,8 +112,8 @@ canvas {
 // 		}
 // }
 // 		//loads images
-// 		backgroundImgs = new PImage[2];
-// 		characters = new PImage[4];	
+// 		//backgroundImgs = new PImage[2];
+// 		//characters = new PImage[4];	
 	void setup(){
 
 		// backgroundImgs[0] = loadImage("clothingStore.jpg");
@@ -133,7 +133,7 @@ canvas {
 		img1 = loadImage("clothingStore.jpg");
 		teresa = loadImage("teresa2.png");
 		babeDan = loadImage("danno.png");
-		sidewalk = loadImage("sideWalk.jpg");
+		sidewalk = loadImage("sideWalk.JPG");
 		chelsey = loadImage("chelsPix.png");
 		dan = loadImage("LeftDan.png");
 		clothing2 = loadImage("clothingStore2.jpg");
@@ -353,6 +353,7 @@ canvas {
 
 			}
 			if(counter == 25){
+				background(0);
 				background(sidewalk);
 			}
 			if(counter == 26){
