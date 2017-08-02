@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>You Choose!</title>
+	<title>Striver</title>
 	<script type= "text/javascript" src="js/processing.min.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href= "kaps.ico"/>
 	<link rel ="stylesheet" type = " text/css" href = "styler.css"/>
@@ -148,7 +148,7 @@ canvas {
 	void draw(){
 		// draws images and text
 		update(mouseX, mouseY);
-		text("You Choose", 125,300);
+		text("Striver", 210,300);
 		//hover over button changes the color
 		if (rectOver){
 			fill(200,0,0);
@@ -361,22 +361,27 @@ canvas {
 				textBox();
 				textLook();
 				text("Chelsey:\nHey Danny, you know who you're\ngonna ask to prom this Friday?",100,480);
+				spaceCont();
 			}
 			if(counter == 27){
 				image(dan,300,210);
 				textBox();
 				textLook();
 				text("Danny:\nI guess I do.",100,480);
+				spaceCont();
 			}
 			if(counter == 28){
 				textBox();
 				textLook();
 				text("Chelsey:\nOooooh! Who's that lucky person?",100,480);
+				spaceCont();
 			}
 			if(counter == 29){
 				textBox();
 				textLook();
 				text("A.The boy who asked you out\nB.Ask Chelsey out\nC.Tell her you're not going",100,480);
+				textSize(12);
+				text("(Press A, B, or C keys.)",100,550);
 				counter++;
 			}
 
@@ -385,18 +390,21 @@ canvas {
 					textBox();
 					textLook();
 					text("Chelsey:\nOMG You mean that guy whose been\ncrushing on you for months! ",100,480);
+					spaceCont();
 
 				}
 				else if (choice == 2){
 					textBox();
 					textLook();
 					text("Chelsey:\n...Wait what?",100,480);
+					spaceCont();
 
 				}
 				else if (choice == 3){
 					textBox();
 					textLook();
 					text("Chelsey:\nWhat?! No way you have to go!! I\nheard this year is going to be\nthe bomb! ",100,480);
+					spaceCont();
 
 				}
 
@@ -407,16 +415,19 @@ canvas {
 					textBox();
 					textLook();
 					text("Chelsey:\nWait I thought you didn't like\nhim.",100,480);	
+					spaceCont();
 				}
 				else if(choice ==2){
 					textBox();
 					textLook();
-					text("Danny:\nA-as a friend, of course! I mean\nI figured since we’re the two\nmusketeers since like forever!",100,480);	
+					text("Danny:\nA-as a friend, of course! I mean\nI figured since we’re the two\nmusketeers since like forever!",100,480);
+					spaceCont();	
 				}
 				else if(choice ==3){
 					textBox();
 					textLook();
-					text("Danny:\nI just don’t feel it Chels, and\nbesides I don’t like parties or\ncrowds that much anyways.",100,480);	
+					text("Danny:\nI just don’t feel it Chels, and\nbesides I don’t like parties or\ncrowds that much anyways.",100,480);
+					spaceCont();	
 				}
 
 
@@ -426,16 +437,19 @@ canvas {
 					textBox();
 					textLook();
 					text("Danny:\nYeah I don't like him like that,\nbut he's a cool guy I guess.",100,480);	
+					spaceCont();
 				}
 				else if(choice ==2){
 					textBox();
 					textLook();
-					text("Danny:\nGet them discount couple tickets,\nya’know…",100,480);	
+					text("Danny:\nGet them discount couple tickets,\nya’know…",100,480);
+					spaceCont();	
 				}
 				else if(choice ==3){
 					textBox();
 					textLook();
-					text("Chelsey:\nOh, come on. You’re going to\nregret this. We only get to be\nyoung once.",100,480);	
+					text("Chelsey:\nOh, come on. You’re going to\nregret this. We only get to be\nyoung once.",100,480);
+					spaceCont();	
 				}
 
 
@@ -444,17 +458,20 @@ canvas {
 				if(choice ==1){
 					textBox();
 					textLook();
-					text("Chelsey:\nBut wouldn’t it be better if you\nwent with someone you like like?",100,480);	
+					text("Chelsey:\nBut wouldn’t it be better if you\nwent with someone you like like?",100,480);
+					spaceCont();	
 				}
 				else if(choice ==2){
 					textBox();
 					textLook();
-					text("Danny:\nOh… ‘Course dude! Why does prom\nhave to be so expensive either\nway!",100,480);	
+					text("Danny:\nOh… ‘Course dude! Why does prom\nhave to be so expensive either\nway!",100,480);
+					spaceCont();	
 				}
 				else if(choice ==3){
 					textBox();
 					textLook();
-					text("Danny:\nNo, I don’t think so. Not going.",100,480);	
+					text("Danny:\nNo, I don’t think so. Not going.",100,480);
+					spaceCont();	
 				}
 
 
@@ -463,17 +480,20 @@ canvas {
 				if(choice ==1){
 					textBox();
 					textLook();
-					text("Danny:\nBut it would make things awkward\nbetween that someone.",100,480);	
+					text("Danny:\nBut it would make things awkward\nbetween that someone.",100,480);
+					spaceCont();	
 				}
 				else if(choice ==2){
 					textBox();
 					textLook();
 					text("Danny:\nYap...",100,480);
+					spaceCont();
 				}
 				else if(choice ==3){
 					textBox();
 					textLook();
 					text("Chelsey:\nOk, fine.",100,480);
+					spaceCont();
 				}
 
 
@@ -484,6 +504,7 @@ canvas {
 					textBox();
 					textLook();
 					text("Danny:\nBesides, I don't have anyone I\nlike right now",100,480);	
+					spaceCont();
 				}
 				else if(choice == 2){
 					counter+=2;
@@ -499,6 +520,7 @@ canvas {
 					textBox();
 					textLook();
 					text("Chelsey:\nWell ok then, suit yourself.",100,480);	
+					spaceCont();
 				}
 
 			}
@@ -542,6 +564,7 @@ canvas {
 					textBox();
 					textLook();
 					text("Mom:\nLook at these sweaters!!They’re\nso cute…(GASP) and only $12.99!",100,480);	
+					spaceCont();
 
 
 				}
@@ -550,23 +573,28 @@ canvas {
 					textBox();
 					textLook();
 					text("Danny:\nMom, focus! We're here to get a\nprom outfit, not sweaters...",100,480);
+					spaceCont();
 
 				}
 				if(counter == 46){
 					textBox();
 					textLook();
-					text("Danny:\nWhich, by the way, are probably\ncheaper as Chanclas4Less.",100,480);
+					text("Danny:\nWhich, by the way, are probably\ncheaper as Everything4Less.",100,480);
+					spaceCont();
 				}
 				if(counter == 47){
 					textBox();
 					textLook();
 					text("Mom:\nAye pues (Oh well)...Hurry up.\nChoose an outfit!!",100,480);
+					spaceCont();
 
 				}
 				if(counter == 48){
 					textBox();
 					textLook();
 					text("A.The sparkly red tux\nB.The dark blue dress\nC.Don't buy any",100,480);
+					textSize(12);
+					text("(Press A, B, or C keys.)",100,550);
 					counter++;
 				}
 				if(counter == 51){
@@ -574,18 +602,21 @@ canvas {
 						textBox();
 						textLook();
 						text("Teresa:\nOh my...that's...bright.",100,480);
+						spaceCont();
 
 					}
 					else if(option == 2){
 						textBox();
 						textLook();
 						text("Teresa:\nOooh! That looks beautiful.",100,480);
+						spaceCont();
 
 					}
 					else if(option == 3){
 						textBox();
 						textLook();
 						text("Teresa:\nWhy not? Don’t you want to look\nnice for this Friday?",100,480);
+						spaceCont();
 
 					}
 				}
@@ -594,18 +625,21 @@ canvas {
 						textBox();
 						textLook();
 						text("Danny:\nYep, I’m going to wear this.",100,480);
+						spaceCont();
 
 					}
 					else if(option == 2){
 						textBox();
 						textLook();
 						text("Danny:\nYeah, I like it.",100,480);
+						spaceCont();
 
 					}
 					else if(option == 3){
 						textBox();
 						textLook();
 						text("Danny:\nI want to nice but I don’t like\nany of these outfits.",100,480);
+						spaceCont();
 
 					}
 				}
@@ -614,18 +648,21 @@ canvas {
 						textBox();
 						textLook();
 						text("Mom:\nBut.........",100,480);
+						spaceCont();
 
 					}
 					else if(option == 2){
 						textBox();
 						textLook();
 						text("Mom:\nYou will look wonderful on the\nday of your prom.",100,480);
+						spaceCont();
 
 					}
 					else if(option == 3){
 						textBox();
 						textLook();
 						text("Mom:\nBut-",100,480);
+						spaceCont();
 
 					}
 				}
@@ -634,16 +671,19 @@ canvas {
 						textBox();
 						textLook();
 						text("Mom:\nHaven't you always said to me to\nstand out?",100,480);
+						spaceCont();
 					}
 					else if(option == 2){
 						textBox();
 						textLook();
 						text("Danny:\nThanks, mama.",100,480);
+						spaceCont();
 					}
 					else if(option == 3){
 						textBox();
 						textLook();
 						text("Danny:\nIt's fine mama, I mean, we can\nsave money instead.",100,480);
+						spaceCont();
 
 					}
 				}
@@ -652,16 +692,19 @@ canvas {
 						textBox();
 						textLook();
 						text("Mom:\nI did, but...fine. Let's go to the\ncashier.",100,480);
+						spaceCont();
 					}
 					if(option == 2){
 						textBox();
 						textLook();
 						text("Mom:\nNow lets go to the cashier and\nbuy it.",100,480);
+						spaceCont();
 					}
 					if(option == 3){
 						textBox();
 						textLook();
 						text("Mom:\nOkay, but first lets look around a\nbit more. I think I see a 50%\nclearance at the shoes aisle.",100,480);
+						spaceCont();
 					}
 				}
 				if(counter == 56){
@@ -688,7 +731,7 @@ canvas {
 				}
 				if(counter ==57){
 					if(option == 1 || option == 2){
-						String s = "My mother checked on me over and over to make sure my prom outfit it somewhere where it won't get wrinkled."
+						String s = 'My mother adjusted my outfit a couple of times, trying to get rid of unwanted wrinkles. She scanned me with her eyes for another second before giving a single nod. "Its perfect!"'
 						textSize(19);
 						text(s,100,170, 600, 400);
 					}
@@ -699,6 +742,31 @@ canvas {
 					}
 					
 				}//All the choices she gave me were either too poofy or wasn't to my tastes. I told my mother not to worry and that I'll have one before prom.
+				if(counter == 58){
+					if(option == 1 || option == 2){
+						String s = "For the remainder of the week, I sat in class with prom the only thing on my mind. Was it going to be fun? Was my date going to have fun? I had too many questions and not enough answers."
+						textSize(19);
+						text(s, 100, 330, 600,400);
+
+						text("(Press space to continue.)", 100, 590);
+
+					}
+					if(option == 3){
+						String s = 'My mother rushed through the house, rummaging through the draws and closet, looking for an outfit. After a while, she came up with a simple white collared shirt, a pair of blue jeans and a black tie. She handed a pair of simple boots. "Here you go! Simple, but stylish."'
+						textSize(19);
+						text(s, 100, 290, 600,400);
+						text("(Press space to continue.)", 100, 590);
+					}
+				}
+				if(counter== 59){
+					background(0);
+				}
+				if(counter == 60){
+					String s = "TO BE CONTINUED"
+					textSize(24);
+				text(s, 100,220,600,400);
+						
+				}
 			}
 			if(choice == 3){
 				if(counter == 39){
@@ -719,22 +787,26 @@ canvas {
 				text(s,100,200, 600, 400);
 				}
 				if(counter==41){
-					String s = "The day after that, my mother kept asking me afterschool if I had changed my mind and decided to go to prom. I firmly stated that I won't go and this went on till the day of prom."
+					String s = "The day after that, my mother kept asking me after school if I had changed my mind. I firmly stated that I won't go and this went on till the day of prom."
 
 					textSize(19);
 					text(s,100,350,600,400);
+
+
+					text("(Press space to continue.)", 100, 590);
+
 				}
 				if(counter == 42){
 					background(0);
 					fill(255);
-					String s = "It was hours before prom night started and an hour past the end of the school day. I decided to walk the the bakery I visit almost everyday, catching up with a friend who works there."
-					textSize(19);
-					text(s,100,80,600,400);
+					// String s = "It was hours before prom night started and an hour past the end of the school day. I decided to walk the the bakery I visit almost everyday, catching up with a friend who works there."
+					// textSize(19);
+					// text(s,100,80,600,400);
 
 				}
 				if(counter == 43){
-					String s = "I haven't seen that person during the whole week since prom week was pretty hectic. As I entered, the shop itself was empty, most likey due to everyone getting ready for their 'big night'."
-					textSize(19);
+					String s = "TO BE CONTINUED"
+					textSize(24);
 					text(s,100,220,600,400);
 				}
 			}
@@ -744,7 +816,8 @@ canvas {
 			if(key == 'a'){
 				textBox();
 			textLook();
-			text("Danny:\nI'm gonna get this red tux.",100,480)
+			text("Danny:\nI'm gonna get this red tux.",100,480);
+			spaceCont();
 			option = 1;
 			counter++;
 			}
@@ -752,14 +825,16 @@ canvas {
 			if(key == 'b'){
 				textBox();
 			textLook();
-			text("Danny:\nGuess I'll get this blue dress.",100,480)
+			text("Danny:\nGuess I'll get this blue dress.",100,480);
+			spaceCont();
 			option = 2;
 			counter++;
 			}	
 			if(key == 'c'){
 				textBox();
 			textLook();
-			text("Danny:\nI don't think I'll buy\nany...",100,480)
+			text("Danny:\nI don't think I'll buy\nany...",100,480);
+			spaceCont();
 			option = 3;
 			counter++;
 			}	
@@ -769,7 +844,8 @@ canvas {
 		if(key == 'a'&&counter == 30){
 			textBox();
 			textLook();
-			text("Danny:\n(SHRUGS)\nWell, Alex asked me out. I think\nI'll go with him.",100,480)
+			text("Danny:\n(SHRUGS)\nWell, Alex asked me out. I think\nI'll go with him.",100,480);
+			spaceCont();
 			choice = 1;
 			counter++;
 
@@ -778,6 +854,7 @@ canvas {
 			textBox();
 			textLook();
 			text("Danny:\nWell it's you.",100,480);
+			spaceCont();
 			choice = 2;
 
 			counter++;
@@ -785,13 +862,14 @@ canvas {
 			textBox();
 			textLook();
 			text("Danny:\nI don't think I'll be going.",100,480);
+			spaceCont();
 			choice = 3;
 
 			counter++;
 		}
 
 
-	print(counter);
+	// print(counter);
 	}
 	
 	void spaceCont(){
